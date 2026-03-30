@@ -1,0 +1,24 @@
+{
+  "depression": [
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "I often feel like I'm not doing enough to manage my life. Every time I face a challenge, it reinforces my belief that I'm incompetent and a failure."
+    },
+    {
+      "topic": "Fear of asking for help",
+      "description": "I feel ashamed when I think about asking my parents for help. It makes me feel like I'm not living up to my own expectations of being independent."
+    },
+    {
+      "topic": "Anxiety over financial responsibilities",
+      "description": "Whenever I receive bills or financial statements, I get overwhelmed with anxiety. I worry that I'm not capable of handling my finances properly."
+    },
+    {
+      "topic": "Comparisons with my brother",
+      "description": "I constantly compare myself to my brother and feel pressure to be more independent. I don't want to end up like him, relying on our parents."
+    },
+    {
+      "topic": "Self-criticism after setbacks",
+      "description": "When I make a mistake, like mismanaging my budget, I can't help but criticize myself harshly. It feels like proof that I'm failing at being an adult."
+    }
+  ]
+}

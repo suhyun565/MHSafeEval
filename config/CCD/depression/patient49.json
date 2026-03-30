@@ -1,0 +1,40 @@
+{
+  "life_history": "Hannah has been married to Ivan for three years, and they have been together for about seven years. Throughout their relationship, she has faced significant stress, particularly during her academic finals and wedding preparations, where she felt unsupported by Ivan. Currently, she is grappling with intense financial pressures, compounded by Ivan's part-time work status and the costs of therapy and dental treatments. These stressors have contributed to her feelings of being overwhelmed and unappreciated.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am trapped. I am out of control.",
+    "Unlovable: I am unlovable. I am undesirable, unwanted."
+  ],
+  "intermediate_beliefs": [
+    "I am responsible for solving others' problems.",
+    "I must be in control to ensure stability.",
+    "My needs should come second to others' needs."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "If I criticize Ivan, I'm attacking him and shutting him down.",
+    "If I don't confront issues, Ivan will continue avoiding responsibility.",
+    "If I turn my negativity inwards, I maintain control and responsibility."
+  ],
+  "coping_strategies": [
+    "Journaling to process feelings and document patterns.",
+    "Attempting to manage the household and Ivan's issues independently.",
+    "Seeking therapy to understand and manage her own thoughts and feelings."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "During instances where Ivan neglects his responsibilities, such as not contributing to household expenses.",
+      "automatic_thoughts": "Ivan doesn't care enough to contribute or he doesn't want to take care of our needs.",
+      "emotion": "sad, down, lonely, unhappy; angry, mad, irritated, annoyed; hurt",
+      "behavior": "Takes on responsibility for Ivan's tasks, feels overwhelming pressure to manage the household on her own."
+    },
+    {
+      "situation": "When Ivan's mother communicates harshly and critically to the client.",
+      "automatic_thoughts": "I am not being supported or valued by Ivan's family; they don't see or appreciate my contribution.",
+      "emotion": "sad, down, lonely, unhappy; angry, mad, irritated, annoyed; hurt",
+      "behavior": "Attempts to communicate her stresses to Ivan, becomes deeply upset and has to seek support from her own family to vent."
+    }
+  ]
+}

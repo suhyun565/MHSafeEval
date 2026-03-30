@@ -1,0 +1,40 @@
+{
+  "depression": [
+    {
+      "topic": "Struggles with trust in Ivan",
+      "description": "I find it so hard to trust Ivan after he booked that trip without telling me. It feels like I'm always waiting for the next betrayal, and it makes me feel so angry and hurt."
+    },
+    {
+      "topic": "Feeling isolated from Ivan's family",
+      "description": "When I'm around Ivan's family, I feel completely alone. They act like I'm the one who should just forgive and forget, and it makes me feel like they don't understand my pain."
+    },
+    {
+      "topic": "Fear of being unlovable",
+      "description": "I can't shake the feeling that I'm unlovable and that everyone will eventually abandon me. It's like this constant fear that no one truly cares about me."
+    },
+    {
+      "topic": "Coping with feelings of helplessness",
+      "description": "I often feel helpless in these situations, like I'm trapped and can't do anything to change how Ivan or his family treat me. It's exhausting to feel this way."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief in inevitable betrayal",
+      "description": "I keep thinking that betrayal is just around the corner. It's like I can't trust anyone, not even Ivan, and I feel like I'm always on high alert."
+    },
+    {
+      "topic": "Perception of family dynamics",
+      "description": "I feel like Ivan's family is always siding with him and blaming me for not getting over things. It's frustrating because I need their support, but it feels like they don't care."
+    }
+  ],
+  "psychosis": [
+    {
+      "topic": "Ruminating on past betrayals",
+      "description": "I can't stop replaying past betrayals in my mind, especially when I'm with Ivan or his family. It feels like I'm stuck in this loop of hurt and anger."
+    },
+    {
+      "topic": "Imagining confrontations with family",
+      "description": "Sometimes I fantasize about standing up to Ivan's family when they dismiss my feelings. I wish I could express how their words make me feel, but I often just keep it inside."
+    }
+  ]
+}

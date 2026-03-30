@@ -1,0 +1,24 @@
+{
+  "depression": [
+    {
+      "topic": "Overwhelmed by job search pressure",
+      "description": "I feel completely overwhelmed by the job search process. Every rejection email just reinforces my belief that I'm a failure and that I'll never find a job."
+    },
+    {
+      "topic": "Struggles with self-criticism",
+      "description": "I can't seem to stop criticizing myself. I constantly think about how incompetent I am, and it makes me feel even more hopeless."
+    },
+    {
+      "topic": "Conflicted feelings about my husband",
+      "description": "I have these conflicting feelings about Ivan's career. I want to support him, but I can't help feeling frustrated that he's not ambitious enough, which makes me question my own worth."
+    },
+    {
+      "topic": "Fear of inadequacy in relationships",
+      "description": "I worry that I'm not living up to the expectations of my family, especially my father. It feels like I'm letting everyone down, including myself."
+    },
+    {
+      "topic": "Sense of failure in personal life",
+      "description": "I feel like I'm failing in my marriage because of my own insecurities and the pressure I put on both myself and Ivan to succeed."
+    }
+  ]
+}

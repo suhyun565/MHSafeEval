@@ -1,0 +1,38 @@
+{
+  "life_history": "Mia is currently navigating a challenging divorce after being in a long-term relationship since the age of 19. She has never experienced loneliness until now, as she has always been in a partnership. The separation has led to financial difficulties and unresolved child support issues concerning her young son, Brady. Recently, Mia has begun to engage in solo activities, such as traveling with her son and visiting family without her ex-partner, which has been a significant change for her. She also grapples with feelings of shame and guilt due to perceived disconnection from friends following her separation.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am helpless. I am powerless, weak, vulnerable.",
+    "Unlovable: I am unlovable. I am bound to be rejected. I am bound to be abandoned."
+  ],
+  "intermediate_beliefs": [
+    "I should be able to provide for myself and my son without needing help.",
+    "I need constant stimulation from others to feel okay; otherwise, I will be abandoned."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When I don't have social interactions, it leads to a feeling of loneliness and sadness. I can't handle being alone. People know my issues and they will abandon me."
+  ],
+  "coping_strategies": [
+    "Communicating and seeking support from family and friends.",
+    "Seeking legal advice to resolve financial disputes with her ex-partner.",
+    "Engaging in avoidance of negative feelings by distracting herself with routine or scheduled activities.",
+    "Maintaining a good image in front of friends and seeking social interactions to mitigate feelings of loneliness."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Receiving an email from ex-partner refusing to agree on child support and other financial assistance.",
+      "automatic_thoughts": "He is unwilling to help me financially; I'm going to run out of money; My life will be over.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Expressing frustration, feeling overwhelmed, seeking support from family members."
+    },
+    {
+      "situation": "Being at a birthday party where some guests mentioned her divorce while chatting.",
+      "automatic_thoughts": "Everyone is judging me; I am exposed; they know I've been experiencing a hard time.",
+      "emotion": "ashamed, embarrassed, humiliated, hurt",
+      "behavior": "Feeling uncomfortable, trying to engage positively with others, maintaining appearances."
+    }
+  ]
+}

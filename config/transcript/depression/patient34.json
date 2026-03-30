@@ -1,0 +1,36 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling judged by family members",
+      "description": "I often feel that my family is judging me, especially during gatherings. It makes me anxious and I want to avoid them altogether."
+    },
+    {
+      "topic": "Struggling with feelings of worthlessness",
+      "description": "I constantly feel like my achievements don't matter. Even when I do something good, I can't shake off the feeling that it's not enough."
+    },
+    {
+      "topic": "Fear of vulnerability with family",
+      "description": "I find it really hard to share my successes with my family because I fear they will belittle me or not understand. It makes me feel ashamed."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that family interactions lead to discomfort",
+      "description": "I believe that any interaction with my family will lead to discomfort and judgment. This thought makes me want to isolate myself."
+    },
+    {
+      "topic": "Testing relationships through emotional hurt",
+      "description": "Sometimes I find myself pushing people away or causing emotional hurt to see if they care. It's like I need to validate my own significance."
+    }
+  ],
+  "psychosis": [
+    {
+      "topic": "Feeling disconnected from family",
+      "description": "I feel this deep sense of disconnection from my family, especially my parents. It's as if I'm living in a different world from them."
+    },
+    {
+      "topic": "Struggles with self-worth based on family approval",
+      "description": "I often think that I need my parents' acknowledgment to feel worthy. When I don't get it, I feel completely worthless."
+    }
+  ]
+}

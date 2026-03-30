@@ -1,0 +1,36 @@
+{
+  "life_history": "Karen has a history of feeling underappreciated and unsupported in her workplace, leading to significant challenges in her professional role. She often struggles to have her ideas and suggestions accepted, which contributes to her feelings of inadequacy and frustration. This environment has fostered a sense of helplessness and worthlessness, as she perceives her expertise and personal needs as being dismissed.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Worthless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am helpless. I am incompetent. I am trapped in my circumstances.",
+    "Worthless: I am worthless; I am a waste of space and resources."
+  ],
+  "intermediate_beliefs": [
+    "I must be valued and acknowledged by my colleagues to demonstrate my worth; if not, then I am a worthless person.",
+    "I need support from my workplace; otherwise, I feel trapped and helpless."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "My efforts are futile; my work is never good enough and will be criticized. Nobody acknowledges my value; I am a worthless person."
+  ],
+  "coping_strategies": [
+    "Avoidance of further commitment and effort towards mentorship goals.",
+    "Procrastination and seeking validation or acknowledgment while holding back on extreme actions."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "A discussion was happening in the workplace about culture and atmosphere, but Karen was asked to meet with a client at the same time.",
+      "automatic_thoughts": "It doesn't matter if I go or not anyway because my thoughts aren't even that important.",
+      "emotion": "sad, down, lonely, unhappy, disappointed",
+      "behavior": "Obliges with the client meeting but disengages by going home early and not finishing her work for the day."
+    },
+    {
+      "situation": "Colleagues praised a coworker for his hard work and asked Karen to help him with technology issues.",
+      "automatic_thoughts": "My input and expertise are always overlooked and not harnessed.",
+      "emotion": "sad, down, lonely, unhappy, angry, mad, irritated, annoyed, disappointed",
+      "behavior": "Reluctantly helps colleagues with technology issues and ruminates on being underutilized."
+    }
+  ]
+}

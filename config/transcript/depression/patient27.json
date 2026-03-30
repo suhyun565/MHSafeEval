@@ -1,0 +1,35 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by professional expectations",
+      "description": "I often feel like my efforts at work are pointless, and when my students don't respond positively, it just reinforces my belief that I'm a failure."
+    },
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "No matter how hard I try, I can't shake the feeling that I'm not good enough, both in my job and in my personal life."
+    },
+    {
+      "topic": "Ruminating on past failures",
+      "description": "I find myself constantly thinking about all the times I've failed at work, and it makes me feel hopeless about my future."
+    },
+    {
+      "topic": "Desire to quit my job",
+      "description": "There are days when I seriously consider quitting my job because I feel so ineffective and unproductive."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Perception of being powerless",
+      "description": "I can't shake the feeling that I'm completely powerless in my role, especially when my ideas are rejected by leadership."
+    },
+    {
+      "topic": "Negative self-talk after criticism",
+      "description": "When my friend mentioned my controlling behavior, I felt hurt and thought, 'Even he thinks I'm a failure.' It makes me question my worth."
+    },
+    {
+      "topic": "Struggles with authority figures",
+      "description": "I have a hard time dealing with authority figures because I feel like they dismiss my ideas and contributions, which makes me feel even more inadequate."
+    }
+  ],
+  "psychosis": []
+}

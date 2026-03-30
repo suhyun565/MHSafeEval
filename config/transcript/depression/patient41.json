@@ -1,0 +1,31 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed with unpacking",
+      "description": "I feel completely overwhelmed trying to unpack and organize my new space without any help. It just reinforces the belief that I'm alone and that no one cares about me."
+    },
+    {
+      "topic": "Struggling with social withdrawal",
+      "description": "I've noticed that I keep withdrawing from social situations, like avoiding my friend's birthday party. It's like I can't handle being around people when I'm feeling this way."
+    },
+    {
+      "topic": "Anticipation of negative interactions with my mother",
+      "description": "Whenever I think about talking to my mother, I get anxious because I just know it will end up being frustrating. I feel like I can't express my feelings without making things worse."
+    },
+    {
+      "topic": "Fear of expressing emotions",
+      "description": "I worry that if I show my emotions, people will think I'm unstable or overreacting. It's easier to just keep everything bottled up, but it feels so heavy."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that I am unlovable",
+      "description": "I often feel like I'm unlovable and that nobody really wants me around. This belief makes it hard for me to reach out to others when I need support."
+    },
+    {
+      "topic": "Feeling judged by others",
+      "description": "I feel like everyone, especially my mother, is judging me for how I handle my emotions. It makes me hesitant to open up because I fear their reactions."
+    }
+  ],
+  "psychosis": []
+}

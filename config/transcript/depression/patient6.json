@@ -1,0 +1,24 @@
+{
+  "depression": [
+    {
+      "topic": "Overwhelmed by project completion",
+      "description": "I feel like I'm stuck in my PhD work. The final stages seem so daunting that I can't even bring myself to tackle them."
+    },
+    {
+      "topic": "Comparing myself to colleagues",
+      "description": "Every time I see my colleagues working longer hours and getting published, I can't help but feel like I'm not good enough. It makes me question my abilities and worth."
+    },
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "I often ruminate about my perceived failures. It feels like I'm trapped in this cycle of thinking that I'll never be as successful as others."
+    },
+    {
+      "topic": "Fear of failure in my career",
+      "description": "I have this constant fear that if I don't achieve something significant, it means I'm a failure. It's paralyzing and makes it hard to work."
+    },
+    {
+      "topic": "Coping with stress through art",
+      "description": "Painting helps me manage my stress, but I worry that I'm using it as a distraction instead of facing my work challenges head-on."
+    }
+  ]
+}

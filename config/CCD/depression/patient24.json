@@ -1,0 +1,38 @@
+{
+  "life_history": "Talia has a complex family background characterized by significant conflict, particularly with her father, who has been described as cruel and dismissive. This history has led to estrangement from her father and has influenced her current relationships, particularly with her partner's family. Talia feels unsupported and mistreated by her partner's sister-in-law, Candace, which exacerbates her stress and frustration. The pressure to conform to familial expectations and tolerate poor treatment mirrors her past experiences, leaving her feeling trapped and powerless in her current situation.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am helpless. I am powerless, weak, vulnerable.",
+    "Unlovable: I am unlovable. I am undesirable, unwanted. I am bound to be abandoned."
+  ],
+  "intermediate_beliefs": [
+    "I must maintain peace and accept family members as they are, even if they treat me poorly.",
+    "If I have conflicts with family members, I cannot win them, and it will only lead to abandonment or family discord."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "If I stand up for myself, it will only make situations worse, and I will be the one causing drama within the family. I'm powerless in this family and they will not support me."
+  ],
+  "coping_strategies": [
+    "Avoiding confrontation with family members.",
+    "Withdrawing from situations that may lead to conflict.",
+    "Considering reducing time spent with family or specific family members.",
+    "Looking for support from friends."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about family vacation in Maine and interacting with Candace.",
+      "automatic_thoughts": "Candace will treat me poorly, and I won't be able to stand up for myself without disrupting the family dynamic.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Feels anxious about upcoming family events, procrastinates on work, loses sleep."
+    },
+    {
+      "situation": "Considering how to handle Candace's rude behavior.",
+      "automatic_thoughts": "If I confront Candace, it will make things worse, but if I don't, I'll continue to be treated poorly.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Ruminates on past interactions with Candace; struggles with deciding to set boundaries."
+    }
+  ]
+}

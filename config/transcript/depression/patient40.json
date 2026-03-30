@@ -1,0 +1,24 @@
+{
+  "depression": [
+    {
+      "topic": "Struggling with anxiety about health",
+      "description": "I constantly worry about my stomach issues and whether they will ever get better. It feels like I'm trapped in this cycle of fear and uncertainty."
+    },
+    {
+      "topic": "Fear of losing happiness",
+      "description": "I find it hard to enjoy the good things in my life because I'm always waiting for something bad to happen. It's like I'm preparing for the worst, even when things are going well."
+    },
+    {
+      "topic": "Feeling unlovable and alone",
+      "description": "Sometimes I feel like no one could truly love me, and that thought makes me feel even more isolated. I worry that I'm destined to be alone forever."
+    },
+    {
+      "topic": "Overanalyzing my symptoms",
+      "description": "Whenever I feel unwell, I can't help but obsess over what might be causing it. I fear that if I don't figure it out, something terrible could happen."
+    },
+    {
+      "topic": "Difficulty trusting my body",
+      "description": "I have a hard time trusting that my body will heal. I often feel like I'm at the mercy of my health and that I have no control over it."
+    }
+  ]
+}

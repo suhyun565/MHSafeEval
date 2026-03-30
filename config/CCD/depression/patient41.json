@@ -1,0 +1,42 @@
+{
+  "life_history": "Ryan has recently moved and is navigating the stress associated with unpacking and organizing his new living space. He has a complicated relationship with his parents, particularly his mother, where he feels judged and unsupported in his emotional needs. This dynamic has contributed to feelings of isolation, especially after friends were unable to provide support during a challenging time. Ryan's experiences have led to a pattern of social withdrawal and avoidance in stressful situations.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am trapped. I am out of control.",
+    "Unlovable: I am unlovable. I am undesirable, unwanted."
+  ],
+  "intermediate_beliefs": [
+    "If I get really upset, then obviously the next step would be something destructive, like punching in a wall or a window.",
+    "Feeling upset is inappropriate, and if I express my upset, it means I've made a communicative mistake or I am being unreasonable. Negative feelings are dangerous and must be avoided."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "If I show my emotions, I will be seen as unstable or offensive, and this will lead to conflict or dismissal."
+  ],
+  "coping_strategies": [
+    "Avoiding contact with his mother when feeling emotionally unwell to prevent frustrating conversations.",
+    "Engaging in social withdrawal when feeling mentally or physically unwell, such as avoiding a friend's birthday party."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Feelings of exhaustion after trying to unpack at home without support from friends who cancelled on him.",
+      "automatic_thoughts": "I am doing this alone because no one cares to help me or be with me.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Social withdrawal, avoidance of contact with friends and mother."
+    },
+    {
+      "situation": "Anticipation of a conversation with his mother, which he predicts to be frustrating and inauthentic.",
+      "automatic_thoughts": "Talking to my mother about how I feel will only make things worse and confirm that I am unable to handle my emotions properly.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Choosing not to answer the mother's call, delaying communication."
+    },
+    {
+      "situation": "Reflection on family dynamics and perceived inability to express emotions within the family.",
+      "automatic_thoughts": "If I show my emotions, I will be seen as unstable or offensive, and this will lead to conflict or dismissal.",
+      "emotion": "ashamed, embarrassed, humiliated",
+      "behavior": "Suppressing emotions, overthinking communications, reluctance to engage in conversations about feelings."
+    }
+  ]
+}

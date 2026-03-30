@@ -1,0 +1,31 @@
+{
+  "depression": [
+    {
+      "topic": "Struggles with expressing anger",
+      "description": "I find it really hard to express my anger without feeling like I'm going to ruin my friendships. It's like I have to keep everything bottled up, and it just makes me feel worse."
+    },
+    {
+      "topic": "Fear of social isolation",
+      "description": "Whenever I feel upset and want to voice my opinions, I worry that I will end up alone. The thought of being disliked by my friends is terrifying."
+    },
+    {
+      "topic": "Procrastination due to anxiety",
+      "description": "I often put off my work because I'm so scared of making mistakes. This anxiety just makes it harder for me to get things done, and then I feel even worse about myself."
+    },
+    {
+      "topic": "Feeling unlovable and rejected",
+      "description": "I constantly feel like I'm unlovable and that people will eventually abandon me. It's a heavy burden that makes it hard to connect with others."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Misunderstanding in friendships",
+      "description": "I often feel like my friends don't really understand me, especially when I try to share my feelings. It leads me to think they judge me instead of supporting me."
+    },
+    {
+      "topic": "Fear of expressing opinions",
+      "description": "I believe that if I share my true thoughts or feelings, I will be rejected or disliked. This belief keeps me from being authentic in my relationships."
+    }
+  ],
+  "psychosis": []
+}

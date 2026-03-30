@@ -1,0 +1,28 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling misunderstood by friends",
+      "description": "I often feel like my friends don't really understand what I'm going through. It's frustrating because I want to connect, but I end up feeling more isolated."
+    },
+    {
+      "topic": "Struggling with medication adjustments",
+      "description": "Adjusting my SSRI medication has been really stressful. I feel like I'm in a constant state of uncertainty about whether it's helping or making things worse."
+    },
+    {
+      "topic": "Frustration with social interactions",
+      "description": "Every time I try to talk to someone about my feelings, it feels like they just don't get it. I end up feeling sad and disappointed, and I withdraw more."
+    },
+    {
+      "topic": "Feeling trapped in my depression",
+      "description": "Sometimes, it feels like I'm just stuck in this cycle of depression. No matter what I do, I can't seem to break free or feel better."
+    },
+    {
+      "topic": "Guilt over not being productive",
+      "description": "When I can't even do simple tasks, I feel so guilty and angry with myself. It's like I'm failing at everything, and that just makes my depression worse."
+    },
+    {
+      "topic": "Fear of being alone forever",
+      "description": "I can't shake the feeling that I'm unlovable and destined to be alone. It's a heavy thought that weighs on me constantly."
+    }
+  ]
+}

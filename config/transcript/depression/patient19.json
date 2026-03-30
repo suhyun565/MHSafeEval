@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "I often feel like I'm not good enough, especially when I compare my progress to others. It's hard to shake off the thought that I'm a failure."
+    },
+    {
+      "topic": "Overwhelmed by procrastination",
+      "description": "I keep putting off tasks, and it feels like I'm stuck in this cycle of procrastination. I know I need to work on my project, but I just can't seem to get started."
+    },
+    {
+      "topic": "Fear of not being productive enough",
+      "description": "I feel like if I'm not constantly working or being productive, I'm wasting my life. This pressure makes it hard for me to relax or enjoy my free time."
+    },
+    {
+      "topic": "Anxiety about decision-making",
+      "description": "When I think about my life choices, I get really anxious. The fear of making the wrong decision paralyzes me, and I end up overthinking everything."
+    },
+    {
+      "topic": "Pressure from external expectations",
+      "description": "I feel like there's so much pressure to showcase my work and be successful, especially after my time in Europe. It's exhausting to keep up with these expectations."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief in incompetence",
+      "description": "I have this deep-seated belief that I'm incompetent and out of control. It feels like no matter what I do, I'm destined to fail."
+    },
+    {
+      "topic": "Perfectionism and fear of failure",
+      "description": "I think I have to make the perfect choice every time, or else I'm a failure. This belief makes it impossible for me to move forward with anything."
+    }
+  ]
+}

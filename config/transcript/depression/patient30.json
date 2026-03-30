@@ -1,0 +1,24 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by job search",
+      "description": "I feel like no matter how hard I try to find a job, I just keep hitting dead ends. It's exhausting and makes me feel like I'm a complete failure."
+    },
+    {
+      "topic": "Self-criticism during job searching",
+      "description": "Every time I don't get a response from an employer, I beat myself up over it. I can't help but think that if I was just better, I would have received an offer by now."
+    },
+    {
+      "topic": "Frustration with Ivan's job search approach",
+      "description": "I get really frustrated with Ivan because it feels like he's not taking his job search seriously. It makes me question our relationship and if I'm making the right choice being with him."
+    },
+    {
+      "topic": "Isolation from social activities",
+      "description": "I've been avoiding going out with friends because I feel like I should be focusing on my job search. But honestly, I just feel more alone and sad."
+    },
+    {
+      "topic": "Fear of future disappointments",
+      "description": "I find myself thinking that if I can't see a positive outcome, then all my efforts are just a waste of time. It makes me feel hopeless."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "life_history": "The client, Violet, has a history of emotional involvement with friends who are facing significant stressors, particularly Yvonne, who is struggling with tenure and caring for an autistic child. Violet feels a strong sense of responsibility towards these friends, often at the expense of her own well-being. This pattern has led to feelings of helplessness and guilt, as she finds herself drained by their emotional burdens while neglecting her own needs.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am powerless, weak, vulnerable. I feel like a victim and believe I am needy.",
+    "Unlovable: I am unlovable. I am bound to be rejected."
+  ],
+  "intermediate_beliefs": [
+    "If I don't support my friends, no one will; I must always be available to help others, even at my own expense.",
+    "My friends' happiness and stability rest upon my shoulders; I have to absorb their negative feelings to help them."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "None of my efforts matter; I can't make anyone happy, and I am just as unhappy as they are."
+  ],
+  "coping_strategies": [
+    "Using emotional support from friends as a coping strategy, despite it being draining.",
+    "Feeling guilty for wanting to set boundaries and limit time spent with friends."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about visiting Yvonne and dealing with her living situation and child.",
+      "automatic_thoughts": "I am dreading this; it's going to be draining and there's nothing I can do to fix it.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Continues to visit Yvonne, feels drained and unhappy, potentially enabling Yvonne's lack of taking action."
+    },
+    {
+      "situation": "Dealing with the reality of all friends being unhappy and the client's own involvement in their lives.",
+      "automatic_thoughts": "None of my efforts matter; I can't make anyone happy, and I am just as unhappy as they are.",
+      "emotion": "sad, down, lonely, unhappy, guilty",
+      "behavior": "Ruminates on friends' unhappiness, doubts ability to be helpful, possibly neglects own needs."
+    }
+  ]
+}

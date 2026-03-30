@@ -1,0 +1,34 @@
+{
+  "life_history": "Yvette has experienced significant emotional turmoil following the death of her aunt, who she viewed as a maternal figure. The passing of her aunt without Yvette being able to fulfill her last request has left her with deep-seated guilt and a sense of failure. This loss has compounded her existing patterns of self-neglect, as she often prioritizes the needs of others over her own. Yvette struggles to find joy in her life, feeling trapped in a cycle of overcommitment to others, which further distances her from her own needs and desires.",
+  "core_beliefs": [
+    "Worthless belief"
+  ],
+  "core_belief_description": [
+    "Worthless: I am worthless, a waste. I am immoral. I am bad - dangerous, toxic, evil."
+  ],
+  "intermediate_beliefs": [
+    "I am responsible for others and must fulfill others' expectations to validate my purpose in life.",
+    "If I'm not meeting the needs of others, I'm a worthless person."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When I feel overwhelmed by my responsibilities, I'm a bad person and always hurting others like what I did to my aunt. It's shameful to think of prioritizing my own needs over others."
+  ],
+  "coping_strategies": [
+    "Avoidance of confronting grief related to her aunt's death.",
+    "Overcommitment to helping others as a means to distract from her inner grief and distress."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about experiences with her aunt and not meeting her aunt's last request.",
+      "automatic_thoughts": "I didn't do what she wanted me to do, I failed her, and this can never be made up with. I am a bad person.",
+      "emotion": "sad, down, lonely, unhappy; ashamed, embarrassed, humiliated; guilty",
+      "behavior": "Keeps ruminating about the past between her and her aunt."
+    },
+    {
+      "situation": "On the way to watch a movie but got a phone call from a friend seeking emotional support.",
+      "automatic_thoughts": "I need to skip the movie and support my friend, otherwise she would be greatly hurt. But I really want to watch the movie.",
+      "emotion": "anxious, worried, fearful, scared, tense; ashamed, embarrassed, humiliated",
+      "behavior": "Struggled but finally gave up the movie and talked with her friend for an hour. Feeling disappointed for giving up the movie."
+    }
+  ]
+}

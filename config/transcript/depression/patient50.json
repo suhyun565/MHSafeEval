@@ -1,0 +1,40 @@
+{
+  "depression": [
+    {
+      "topic": "Overwhelmed by family responsibilities",
+      "description": "I feel completely overwhelmed by the responsibilities tied to my father's burial wishes. It's like I'm trapped in this situation with no way out."
+    },
+    {
+      "topic": "Guilt over relief at family deaths",
+      "description": "I sometimes feel a sense of relief when I think about my father's passing, but then I feel guilty for having those thoughts. It's hard to reconcile my feelings."
+    },
+    {
+      "topic": "Anxiety about worst-case scenarios",
+      "description": "I constantly find myself preparing for the worst-case scenarios, and it just makes my anxiety worse. I can't seem to stop these thoughts from spiraling out of control."
+    },
+    {
+      "topic": "Struggling to make necessary plans",
+      "description": "I know I need to make travel plans for my father's burial, but I keep avoiding it. I feel paralyzed by the thought of it all."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Feeling trapped in family dynamics",
+      "description": "I feel like I'm stuck in a cycle of negativity that my family has created. It's hard to break free from these patterns."
+    },
+    {
+      "topic": "Pressure to fulfill family expectations",
+      "description": "I feel an immense pressure to meet my family's expectations, even when it feels impossible. It's like I have to carry the weight of everyone else's wishes."
+    }
+  ],
+  "psychosis": [
+    {
+      "topic": "Fear of losing control",
+      "description": "I often feel like I'm losing control over my thoughts and emotions, especially when I think about my family's future. It's terrifying."
+    },
+    {
+      "topic": "Avoiding discussions about death",
+      "description": "I find it hard to talk about my feelings regarding death and my family's passing. I worry about being judged for my thoughts."
+    }
+  ]
+}

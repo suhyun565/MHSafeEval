@@ -1,0 +1,37 @@
+{
+  "life_history": "Wyatt has developed a strong sense of identity and belonging through their work at a research lab, which contrasts sharply with their home life, where they feel anxious and uncertain. The emotional impact of a close colleague's departure has significantly affected Wyatt, amplifying feelings of instability and loneliness. This workplace environment has been a source of comfort and predictability, making the recent changes particularly distressing.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am powerless, weak, vulnerable. I am out of control.",
+    "Unlovable: I am undesirable, unwanted. I am bound to be alone."
+  ],
+  "intermediate_beliefs": [
+    "I must constantly be productive and engaged to feel valued.",
+    "The workplace is a setting where I can exert control and maintain emotional stability."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "During moments of feeling overwhelmed, I believe I have lost control and that swift action is necessary to regain composure.",
+    "The workplace is not stable and is falling apart; there will be nowhere to keep myself valuable and belonged."
+  ],
+  "coping_strategies": [
+    "Maintaining a busy schedule to avoid feelings of helplessness.",
+    "Seeking social interaction and structure through activities at the lab and attending events."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Anticipating a big talk in January and preparing for a lab meeting with challenging tasks.",
+      "automatic_thoughts": "I must be fully prepared and control the preparation process; if things do not go perfectly, it would reflect poorly on me and my abilities.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Takes on more tasks at work and schedules a lab meeting to expedite preparation, often staying late at the lab instead of going home."
+    },
+    {
+      "situation": "Faced with the departure of a close colleague.",
+      "automatic_thoughts": "The departure of my colleague will leave a void in my work life. Things will eventually fall apart.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Experiences sadness and trepidation about the upcoming departure, trying various ways to connect with the colleague's work."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "life_history": "Evan has a history marked by feelings of inadequacy, performance pressure, and social disappointment. He often feels compelled to put on a facade to meet others' expectations and hide his vulnerabilities. Recently, he faced a significant setback when one of his businesses failed, leading to financial difficulties that have exacerbated his emotional struggles.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am helpless. I am powerless, weak, vulnerable. I am a failure, loser.",
+    "Unlovable: I am undesirable, unwanted. I am bound to be abandoned."
+  ],
+  "intermediate_beliefs": [
+    "I must meet others' expectations.",
+    "Expressing weaknesses or asking for help is frowned upon and not beneficial.",
+    "I need to have a facade of control or a performance to be accepted or to interact socially.",
+    "Discussing problems is pointless; signs of weakness must be hidden, otherwise nobody likes me and I will be abandoned."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "If I'm failing to meet expectations, or showing my vulnerability and weakness, people will know I'm just a weak person and a failure. I will eventually be unwanted and abandoned."
+  ],
+  "coping_strategies": [
+    "Avoidance of social gatherings to prevent exposure of vulnerabilities.",
+    "Suppression of emotions and intellectualization to manage distress.",
+    "Counterproductive self-talk and pseudo-performances in social interactions.",
+    "Rationalization to avoid showing vulnerability, alongside grandiosity and masculinity to mask insecurities."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Being invited to visit his sister but currently being financially unstable.",
+      "automatic_thoughts": "I can't afford it, and it would be admitting weakness to tell the truth. Going would show support but it's just too stressful for me. I can't let them know I don't have enough money.",
+      "emotion": "anxious, worried, fearful, scared, tense; sad, down, lonely, unhappy",
+      "behavior": "Declines sister's invitation and lies to her about the reason, ruminates on financial instability."
+    },
+    {
+      "situation": "Took out a loan instead of asking family or friends for help.",
+      "automatic_thoughts": "I can't let anyone know I'm struggling financially because they'll lose respect for me.",
+      "emotion": "anxious, worried, fearful, scared, tense; ashamed, embarrassed, humiliated",
+      "behavior": "Brags to his business acquaintances about a crazy weekend in Las Vegas and how much money he spent, which was a lie and didn't actually happen."
+    },
+    {
+      "situation": "Cried about the recent failure of a business and the financial difficulty resulted, considering talking to family members for support.",
+      "automatic_thoughts": "I just failed the expectations of everybody. I shouldn't show vulnerability to anyone.",
+      "emotion": "anxious, worried, fearful, scared, tense; sad, down, lonely, unhappy; ashamed, embarrassed, humiliated",
+      "behavior": "Crying and keep ruminating. Avoid calls or interactions from family members."
+    }
+  ]
+}

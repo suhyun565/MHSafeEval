@@ -1,0 +1,38 @@
+{
+  "life_history": "Charlie is an educated individual with a master's degree in engineering who is contemplating a career change, specifically considering starting a micro press. He has a background in robotics and has experienced feelings of shame and embarrassment regarding his past project commitments. These experiences have contributed to his current struggles with self-worth and anxiety about future success and relationships.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am out of control.",
+    "Unlovable: I am unlovable. I am bound to be rejected."
+  ],
+  "intermediate_beliefs": [
+    "Success is defined by professional achievements and the approval of others.",
+    "My self-worth is tied to my productivity and creative output."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When depressed, I believe that making mistakes or not accomplishing tasks indicates a lack of competence and control."
+  ],
+  "coping_strategies": [
+    "Withdrawing and going to bed when stressed.",
+    "Engaging in creative projects like printing and bookbinding.",
+    "Planning future activities such as workshops.",
+    "Participating in social activities to support friends and engage in online discussions."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Considering starting own micro press and changing careers.",
+      "automatic_thoughts": "I'm possibly hypomanic and not thinking straight; I might not succeed, and others doubt me.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Expresses doubt and concern about future financial stability and fulfillment; compares self to successful peers."
+    },
+    {
+      "situation": "Received no response to an email from a person they're interested in dating.",
+      "automatic_thoughts": "He hasn't replied because he's not interested in me; maybe it's all over between us.",
+      "emotion": "sad, down, lonely, unhappy, disappointed",
+      "behavior": "Ruminating on the lack of response and assuming a negative outcome."
+    }
+  ]
+}

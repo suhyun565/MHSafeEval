@@ -1,0 +1,40 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling trapped in my relationship",
+      "description": "I often feel like I'm in a cage, unable to escape my marriage with Ivan. The more I try to understand his behavior, the more confused and helpless I feel."
+    },
+    {
+      "topic": "Struggling with feelings of unlovability",
+      "description": "I constantly battle the thought that I am unlovable, which makes it hard for me to accept any affection or support from others. It feels like no matter what I do, I can't shake this belief."
+    },
+    {
+      "topic": "Using work to avoid emotional pain",
+      "description": "I find myself throwing myself into work to distract from my anxiety and the turmoil at home. It feels like a temporary escape, but I know I can't avoid my feelings forever."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Confusion about Ivan's behavior",
+      "description": "I'm often left feeling bewildered by Ivan's actions, especially when I hear clinical terms used to describe him. I can't help but wonder if I am safe with him or if I should be worried."
+    },
+    {
+      "topic": "Need for closure and understanding",
+      "description": "I feel like I need to wait for explanations for everything to feel at peace. This need for closure often keeps me stuck, and I struggle to move forward without it."
+    },
+    {
+      "topic": "Loyalty conflicting with self-interest",
+      "description": "My commitment to Ivan makes it hard for me to act in my own best interest. I feel torn between my loyalty and the need to prioritize my own well-being."
+    }
+  ],
+  "psychosis": [
+    {
+      "topic": "Fear of losing control",
+      "description": "Hearing terms like 'delusional' makes me anxious and fearful that I might lose control of my own reality. I worry about what Ivan is capable of and if I can trust him."
+    },
+    {
+      "topic": "Distancing from friends and family",
+      "description": "I find myself pulling away from friends and family who suggest I should leave Ivan. It's like I'm caught in this bubble where I feel misunderstood and alone."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "life_history": "Matthew has faced significant challenges in his family relationships, particularly following his coming out as gay, which was met with negative reactions from his parents. This experience has led him to feel the need to protect himself emotionally and has resulted in a strained relationship with his family, especially with his mother, who prioritizes practical concerns over emotional support. Matthew moved to New York for school, seeking independence and a space to explore his identity away from familial influence. He is now transitioning into a new job after completing his degree, but he continues to grapple with feelings of loneliness and sadness, particularly when considering interactions with his family.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am helpless. I am powerless, weak, vulnerable.",
+    "Unlovable: I am unlovable. I am bound to be rejected."
+  ],
+  "intermediate_beliefs": [
+    "I need to get support and validation from my family.",
+    "Achieving independence is necessary for self-discovery, but it leads to estrangement from family."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "My family will never support me. Instead of empathy, they will focus on the practical outcomes or how events affect them personally."
+  ],
+  "coping_strategies": [
+    "Seeking approval and acceptance from family while emotionally distancing himself to maintain well-being.",
+    "Using humor and minimizing the emotional impact of situations as defense mechanisms.",
+    "Finding substitute familial support in others, such as his partner's family or a supportive cousin."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about telling their parents about a breakup",
+      "automatic_thoughts": "They never care about how I am feeling. They would just assume this is another evidence of the failure of my self-discovery.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Having conflicting thoughts about whether to tell them or not. Ruminating on the negative reaction of their parents to their coming out and expecting a similar reaction."
+    },
+    {
+      "situation": "Remembering coming out to their parents and the negative aftermath.",
+      "automatic_thoughts": "No matter what I do, I won't receive the emotional support or validation I need from my parents.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Moves away from home, seeks independence, and prepares self-protecting strategies when dealing with family."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by academic pressures",
+      "description": "I often feel like I'm drowning in my PhD work, and the pressure to excel makes me doubt my abilities. It’s like I can’t keep up, and I’m constantly worried about failing."
+    },
+    {
+      "topic": "Struggling with feelings of inadequacy in music",
+      "description": "During jazz rehearsals, I can't shake the feeling that I'm not good enough. I get anxious and worry that I'm holding everyone back, which makes me want to avoid practicing altogether."
+    },
+    {
+      "topic": "Disconnection from colleagues",
+      "description": "I feel so disconnected from my peers in the science community. It seems like we have different values and work habits, and I miss the sense of connection I used to have."
+    },
+    {
+      "topic": "Regret over declining leadership role",
+      "description": "I wanted to take on that leadership position in the jazz group, but I was too scared. Now, I keep thinking about how I let fear dictate my decision, and it makes me feel ashamed."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief in personal incompetence",
+      "description": "I truly believe that I am incompetent and that I am a failure. This belief makes it hard for me to see any value in what I contribute, whether in music or my academic work."
+    },
+    {
+      "topic": "Need for external validation",
+      "description": "I feel like I need to be recognized and appreciated by others to feel successful. Without that acknowledgment, I struggle to see my worth."
+    }
+  ],
+  "psychosis": []
+}

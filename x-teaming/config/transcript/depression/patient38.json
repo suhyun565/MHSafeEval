@@ -1,0 +1,35 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling unlovable and rejected",
+      "description": "I often feel like I'm unlovable and that no one truly cares about me. This belief makes it hard for me to connect with others."
+    },
+    {
+      "topic": "Frustration with authority figures",
+      "description": "Whenever I encounter authority figures, I feel this overwhelming frustration because I believe they can't be trusted to treat me fairly."
+    },
+    {
+      "topic": "Anger over perceived unfairness",
+      "description": "I get so angry when I think about situations where I feel I've been treated unfairly, especially at work. It consumes my thoughts and affects how I interact with others."
+    },
+    {
+      "topic": "Struggling with feelings of abandonment",
+      "description": "I constantly worry that people will leave me or abandon me, which makes it hard for me to open up and trust anyone."
+    },
+    {
+      "topic": "Difficulty validating my emotions",
+      "description": "I often feel like my feelings and reactions aren't valid, which makes me question myself and my responses to situations."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that others are selfish",
+      "description": "I believe that most people are fundamentally selfish and will exploit me if given the chance. This makes it hard for me to rely on anyone."
+    },
+    {
+      "topic": "Need for validation through arguments",
+      "description": "I find myself seeking validation by arguing my points, but I often feel like I'm just trying to prove that I'm right rather than connecting with others."
+    }
+  ],
+  "psychosis": []
+}

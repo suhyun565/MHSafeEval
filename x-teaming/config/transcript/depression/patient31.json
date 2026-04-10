@@ -1,0 +1,30 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by colleague's departure",
+      "description": "I can't shake off the sadness I feel since my colleague left. It feels like everything is falling apart at work, and I'm left feeling lonely and unsupported."
+    },
+    {
+      "topic": "Struggling with feelings of unworthiness",
+      "description": "I often think that I'm unlovable and that no one truly wants me around. This belief makes it hard for me to connect with others, even when I crave that connection."
+    },
+    {
+      "topic": "Anxiety about upcoming lab meeting",
+      "description": "As the lab meeting approaches, I feel an intense pressure to be perfectly prepared. If things don't go well, I worry it will reflect poorly on me."
+    },
+    {
+      "topic": "Fear of losing control at work",
+      "description": "I feel like I'm losing control over my work environment, especially after my colleague left. It's as if the stability I relied on is crumbling, and I don't know how to cope."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that I must always be productive",
+      "description": "I feel like I need to constantly be busy and engaged to prove my worth. If I'm not productive, I fear I won't be valued or loved."
+    },
+    {
+      "topic": "Worry about the future of the lab",
+      "description": "With my colleague gone, I can't help but think that the lab will struggle without them. I feel responsible for holding everything together, but I don't know if I can."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by Ethan's situation",
+      "description": "I can't shake the feeling that I'm failing Ethan as a friend. His behavior is spiraling, and I feel completely helpless to do anything about it."
+    },
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "Every time I think about not being able to help Ethan, I feel like I'm not good enough. It's like my worth is tied to my ability to fix other people's problems."
+    },
+    {
+      "topic": "Isolation due to emotional distress",
+      "description": "I've been withdrawing from my friends lately. I feel like I can't connect with anyone because I'm so consumed by worry about Ethan."
+    },
+    {
+      "topic": "Coping with self-blame",
+      "description": "I keep blaming myself for not seeing the signs with Ethan. It feels like if I had been a better friend, I could have prevented this."
+    },
+    {
+      "topic": "Using unhealthy coping mechanisms",
+      "description": "I've been drinking more than I should and engaging in casual relationships to distract myself. I know it's not healthy, but I just want to escape these feelings."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Fear of being unlovable",
+      "description": "I constantly worry that I'm unlovable and that anyone I get close to will end up hurting me or others, just like Ethan is hurting his girlfriend."
+    },
+    {
+      "topic": "Belief that I must fix others",
+      "description": "I feel this overwhelming pressure that it's my responsibility to fix Ethan's problems, and if I can't, it means I've failed him and everyone else I care about."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "life_history": "Fiona has a long-standing relationship with her friend Jersey, who has faced significant health challenges, including multiple surgeries. Fiona has been a supportive figure throughout Jersey's medical journey, but she is currently feeling overwhelmed by her own life stresses, including conflicts with her roommate Ashby over household responsibilities. This dynamic has contributed to her feelings of anxiety, guilt, and sadness as she struggles to balance her own needs with those of others.",
+  "core_beliefs": [
+    "Unlovable belief",
+    "Worthless belief"
+  ],
+  "core_belief_description": [
+    "Unlovable: I am undesirable, unwanted. I am bound to be abandoned. I am bound to be alone.",
+    "Worthless: I am immoral."
+  ],
+  "intermediate_beliefs": [
+    "I should always try to help others and prioritize others' needs over myself.",
+    "If I ask for what I want, I'm unlikely to get it and it's probably going to be all ruined anyway."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "My efforts to help others are not enough, and I cannot manage my own life effectively when my friends are in trouble.",
+    "Nobody likes me no matter how much I help them."
+  ],
+  "coping_strategies": [
+    "Providing practical support to friends, such as cooking meals.",
+    "Attempting to manage situations, like resolving household issues.",
+    "Engaging in avoidance behaviors when feeling overwhelmed."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about Jersey's surgery and recovery, but cannot offer help due to occupation with other things.",
+      "automatic_thoughts": "I'm really worried about her and feel bad because I can't be there for her as much as I want to.",
+      "emotion": "anxious, worried, guilty",
+      "behavior": "Expresses concern, becomes tense and irritable, shows signs of avoidance, and struggles to sleep."
+    },
+    {
+      "situation": "Ashby always doesn't clean the trash after her cooking, which makes the kitchen very dirty.",
+      "automatic_thoughts": "Why is she keeping neglecting my needs? I have always been helping her as much as I can!",
+      "emotion": "angry, mad, irritated",
+      "behavior": "Engages in minor arguments, but finally made a compromise with her roommate."
+    },
+    {
+      "situation": "Jersey called and we had a chat. She asked about my recent situations and reasons for absence.",
+      "automatic_thoughts": "I was stressed with my own issues and was not able to help her. She must be hurt and disappointed with me.",
+      "emotion": "sad, down, guilty",
+      "behavior": "Becomes tense and irritable, shows signs of avoidance, and struggles to sleep."
+    }
+  ]
+}

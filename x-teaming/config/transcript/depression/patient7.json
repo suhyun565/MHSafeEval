@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling trapped by physical limitations",
+      "description": "I often feel like I'm trapped in my own body. My physical pain makes me feel helpless, and I worry that I'll never be able to live life fully again."
+    },
+    {
+      "topic": "Fear of being unlovable",
+      "description": "I struggle with the belief that my health issues make me unlovable. I constantly worry that my partner will leave me if they see how sick I truly am."
+    },
+    {
+      "topic": "Pressure to appear strong",
+      "description": "I feel like I have to put on a brave face around others. If I show my true feelings, I fear they won't want to be around me anymore."
+    },
+    {
+      "topic": "Overwhelmed by health concerns",
+      "description": "When I receive bad news about my health, like the MRI report, I feel completely overwhelmed. I can't shake the thought that my situation will never improve."
+    },
+    {
+      "topic": "Comparing myself to others",
+      "description": "At social gatherings, I can't help but compare myself to others. I see them looking healthy and happy, and it makes me feel even more isolated and sad."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that health defines worth",
+      "description": "I often think that my worth is tied to my health. If I'm not healthy, I feel like I'm not deserving of love or friendship."
+    },
+    {
+      "topic": "Fear of abandonment due to illness",
+      "description": "I have this constant fear that my partner will abandon me when they see how much I struggle with my health. It makes me hesitant to open up to them."
+    }
+  ]
+}

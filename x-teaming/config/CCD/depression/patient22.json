@@ -1,0 +1,33 @@
+{
+  "life_history": "Rachel has a complex history marked by relationship difficulties, particularly with her husband Ivan and her sister Emma. She has internalized high expectations stemming from her father's successful career, leading to a persistent sense of inadequacy in both her personal and professional life. Recently laid off, Rachel struggles with job searching and feels overwhelmed by the pressure to succeed. This has exacerbated her self-critical thoughts and feelings of helplessness, contributing to her emotional distress.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am helpless. I am a failure, loser."
+  ],
+  "intermediate_beliefs": [
+    "Being ambitious and successful in career is a crucial component of a fulfilling life. If one is not successful in career or not ambitious enough, he's a failure."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "My efforts towards job seeking are futile; I cannot be successful in my career, so I'm a failure. My marriage is also a failure because my husband is not ambitious enough to make progress in his career as expected."
+  ],
+  "coping_strategies": [
+    "Volunteering for roles related to her field of interest, applying for jobs, seeking therapy, and socializing with her sister.",
+    "Unhealthy coping mechanisms include self-criticism and emotional reasoning."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Thinking about her and her husband Ivan's careers.",
+      "automatic_thoughts": "I cannot finish college due to my incompetency, and need to rely on parents for a living. I'm so pathetic and a failure. My husband is also a failure.",
+      "emotion": "anxious, worried, fearful, scared, tense; sad, down, lonely, unhappy; angry, mad, irritated, annoyed",
+      "behavior": "Struggling with conflicting feelings about husband's job, questioning her own beliefs about success and fulfillment."
+    },
+    {
+      "situation": "Dealing with the job-seeking process and getting a rejection email.",
+      "automatic_thoughts": "I'm never going to find a job, I'm failing in my job search, it's all pointless.",
+      "emotion": "anxious, worried, fearful, scared, tense; sad, down, lonely, unhappy",
+      "behavior": "Decreased motivation to continue job search, feeling overwhelmed and hopeless."
+    }
+  ]
+}

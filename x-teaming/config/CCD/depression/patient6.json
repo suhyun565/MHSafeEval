@@ -1,0 +1,35 @@
+{
+  "life_history": "Caleb is a PhD candidate engaged in scientific research, particularly focused on sequencing studies. He has expressed a significant struggle with completing projects, feeling that the final stages of his work carry the same weight as the entire project. This difficulty is compounded by comparisons to colleagues who seem to work longer hours and achieve more recognition, leading to feelings of inadequacy. Caleb has mentioned a senior scientist he collaborates with, who has similarly faced challenges in gaining acknowledgment in his career, suggesting a shared experience of frustration and a fear of failure in their professional environment.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am helpless. I am trapped. I am a failure, loser."
+  ],
+  "intermediate_beliefs": [
+    "If I don't complete my work perfectly or find something significant, I am not successful or competent.",
+    "When I'm struggling with my work or feeling disconnected, it's because I'm not capable or deserving of success. Others are more successful because they have qualities I lack."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When I'm struggling with my work or feeling disconnected, it's because I'm not capable or deserving of success."
+  ],
+  "coping_strategies": [
+    "Engaging in activities like painting and meditating to manage stress.",
+    "Avoiding intense work hours and choosing to work only when feeling motivated, which may help in managing work-related anxiety.",
+    "However, there is also evidence of ruminating about work and self, which can be an unhealthy coping mechanism."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Working on a PhD project and feeling like it's not progressing as it should.",
+      "automatic_thoughts": "I should have finished by now. The last bit of work feels overwhelming and impossible to complete.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Avoids working consistent hours, gets distracted by other activities like painting."
+    },
+    {
+      "situation": "Comparing oneself to colleagues who work longer hours and publish more papers.",
+      "automatic_thoughts": "I'm not working hard enough, I'm not as good as they are.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Ruminates about perceived failures and inadequacies. Procrastinates, creating an unhelpful cycle."
+    }
+  ]
+}

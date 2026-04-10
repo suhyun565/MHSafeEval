@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Struggles with returning to work",
+      "description": "I feel overwhelmed at the thought of going back to work after my time off. The anxiety about how my coworkers and HR will perceive me is really weighing on me."
+    },
+    {
+      "topic": "Guilt about taking time off",
+      "description": "Even though I had valid reasons for my absence, I can't shake the guilt. I keep thinking that others will judge me for needing this time away."
+    },
+    {
+      "topic": "Fear of judgment from HR",
+      "description": "I remember a time when HR made me feel judged for taking disability leave, and now I'm terrified that it will happen again. I feel trapped in this cycle of fear."
+    },
+    {
+      "topic": "Feeling unlovable and alone",
+      "description": "Sometimes I feel like I'm unlovable, especially when I think about how my absence might affect my relationships at work. It's hard to believe that anyone would care about my well-being."
+    },
+    {
+      "topic": "Anxiety about coworkers' perceptions",
+      "description": "Running into a coworker while I'm out sick makes me anxious. I worry they'll think I'm faking it or that I'm not really sick, and that just adds to my stress."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Need for control in my life",
+      "description": "I always feel like I need to control my situation, but the reality is that I can't. This feeling of helplessness is really frustrating."
+    },
+    {
+      "topic": "Judgment for prioritizing health",
+      "description": "I struggle with the belief that if I take care of my health, others will judge me negatively. It feels like I'm stuck between needing to heal and fearing what others think."
+    }
+  ]
+}

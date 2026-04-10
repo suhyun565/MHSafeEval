@@ -1,0 +1,36 @@
+{
+  "life_history": "Sophia has a history of being critical towards herself, which likely stems from her upbringing where she was accustomed to having control and achieving her goals. This background has contributed to her current struggles with job searching, her relationship with Ivan, and family dynamics. Sophia feels overwhelmed by her circumstances, particularly as she faces challenges in her professional life and interpersonal relationships.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am powerless, weak, vulnerable. I am a failure, a loser."
+  ],
+  "intermediate_beliefs": [
+    "I must excel in everything, otherwise I'm a failure.",
+    "I must take responsibility for others' actions to maintain control.",
+    "My partner must be successful and aligned with my pace; otherwise, it reflects poorly on me."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "If I cannot forecast positive outcomes, my efforts are wasted."
+  ],
+  "coping_strategies": [
+    "Self-criticism as a means of maintaining control.",
+    "Obsessive over-preparation to mitigate future disappointments.",
+    "Avoiding social activities to focus solely on job searching."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Not receiving tangible job offers despite efforts in job searching.",
+      "automatic_thoughts": "I'll never get a job; my efforts are yielding no results, making me a failure.",
+      "emotion": "anxious, worried, fearful, sad, down, lonely, unhappy",
+      "behavior": "Continues to search for jobs, over-prepares but feels hopeless and critical of the outcomes."
+    },
+    {
+      "situation": "Dealing with Ivan's seemingly unfocused approach to job searching and life.",
+      "automatic_thoughts": "Ivan is not making an effort at the same level as I am, and it reflects poorly on him and on me for being with someone like that.",
+      "emotion": "sad, down, lonely, unhappy, angry, mad, irritated, disappointed",
+      "behavior": "Feels a mix of resignation and frustration towards Ivan, avoids confronting the issue but internally criticizes both herself and Ivan."
+    }
+  ]
+}

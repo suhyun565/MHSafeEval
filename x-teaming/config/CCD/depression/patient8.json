@@ -1,0 +1,39 @@
+{
+  "life_history": "Chris has a history of working overseas and creating a website related to that work. He often experiences excitement about new ideas but tends to become conflicted and lose confidence when faced with challenges, leading him to abandon projects. Additionally, he is navigating complex feelings regarding his father, which includes writing a 'living letter' as part of his journey toward forgiveness.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief",
+    "Worthless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am powerless and unable to succeed on my own.",
+    "Unlovable: I am undesirable and unwanted by others.",
+    "Worthless: I am worthless and a waste of space."
+  ],
+  "intermediate_beliefs": [
+    "If I don't succeed in my projects or if people don't acknowledge my work, then it means I am not valued or desired.",
+    "I need to be constantly validated by others to feel worthwhile."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When I face challenges or feel stuck, it means I am failing and this confirms that I am undesirable or not good enough. Others' approval is the only measure of my success and worth."
+  ],
+  "coping_strategies": [
+    "Using fantasy as a coping mechanism to escape feelings of worthlessness.",
+    "Seeking validation through social media and relying on external feedback to feel appreciated.",
+    "Avoiding challenges and retreating into fantasy when feeling overwhelmed."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Working on personal project of building a website.",
+      "automatic_thoughts": "I'm stuck with this project, maybe it's not worth continuing. I always get excited but then lose confidence.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Avoids continuing the project, engages in fantasy or seeks validation through social media."
+    },
+    {
+      "situation": "Reflecting on past successes and current challenges.",
+      "automatic_thoughts": "I've succeeded before without knowing the outcome, so I should keep going. But what if I fail again?",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Becomes preoccupied with potential failure, may retreat into fantasy or avoid taking action."
+    }
+  ]
+}

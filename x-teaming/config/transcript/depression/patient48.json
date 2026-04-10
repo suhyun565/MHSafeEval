@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Anxiety about starting a new career",
+      "description": "I'm feeling overwhelmed by the idea of starting my own micro press. I keep worrying that I won't be successful and that everyone will see me as a failure."
+    },
+    {
+      "topic": "Struggles with self-worth",
+      "description": "I often feel like my value is tied to my achievements. When I think about my past projects, I can't help but feel ashamed and unworthy."
+    },
+    {
+      "topic": "Fear of rejection in relationships",
+      "description": "When I don't hear back from someone I'm interested in, I immediately assume they don't like me. It makes me feel so lonely and down."
+    },
+    {
+      "topic": "Ruminating on past mistakes",
+      "description": "I find myself constantly thinking about my past failures and how they define my competence. It's hard to shake off the feeling that I'm just not good enough."
+    },
+    {
+      "topic": "Coping through creative outlets",
+      "description": "When I'm feeling stressed, I try to engage in creative projects like printing and bookbinding. It helps me escape my worries, but I still feel anxious about the future."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Doubt about my abilities",
+      "description": "I often think that I'm incompetent and that I can't control my life. This belief makes it hard for me to take risks or pursue new opportunities."
+    },
+    {
+      "topic": "Comparing myself to others",
+      "description": "I can't help but compare my journey to my peers who seem to be thriving. It reinforces my feelings of being unlovable and inadequate."
+    }
+  ]
+}

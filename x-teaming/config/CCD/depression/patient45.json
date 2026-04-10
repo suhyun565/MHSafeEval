@@ -1,0 +1,38 @@
+{
+  "life_history": "Elena has a complex family dynamic characterized by recurrent conflicts and strained relationships. She faces issues with trust and boundaries among family members, some of whom struggle with alcoholism. Elena feels that a relative has taken advantage of her generosity, leading to a general frustration with those around her. She has a history of significant aggressive behavior and violence, which further complicates her interpersonal relationships.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am helpless. I am powerless, weak, vulnerable.",
+    "Unlovable: I am unlovable. I am bound to be alone."
+  ],
+  "intermediate_beliefs": [
+    "People always take advantage of me.",
+    "I need to be assertive to not be a victim.",
+    "I must protect myself from being hurt by others.",
+    "I can't rely on anyone."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When I'm depressed, I believe that I will always be alone because nobody cares, I'm unlovable, and it's useless to try because people will disappoint me."
+  ],
+  "coping_strategies": [
+    "Avoiding social interactions to prevent feeling overwhelmed by rage.",
+    "Isolating at home, often staying in the bedroom."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Reflecting on the prospect of spending time alone during holidays.",
+      "automatic_thoughts": "I am always the one giving and never receiving. People only remember me when they need something.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Expresses resentment and continues to ruminate on past unreciprocated generosity, reinforcing isolation."
+    },
+    {
+      "situation": "Considering reaching out to an estranged individual who has hurt me.",
+      "automatic_thoughts": "He may come back and say sorry, but it won't be genuine. It will be the same cycle all over again.",
+      "emotion": "disappointed, hurt",
+      "behavior": "Debates internally whether to re-initiate contact, ultimately choosing not to out of self-protection."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "depression": [
+    {
+      "topic": "Fear of financial instability",
+      "description": "I'm constantly worried about my financial situation. Every time I think about spending money, I feel this overwhelming anxiety that I can't shake off."
+    },
+    {
+      "topic": "Avoiding social interactions",
+      "description": "I keep declining invitations from friends and family because I can't bear the thought of them knowing how much I'm struggling. It feels safer to isolate myself."
+    },
+    {
+      "topic": "Struggling with vulnerability",
+      "description": "I feel like I can't show my true self to anyone. If I reveal my struggles, I worry that people will see me as weak or a failure."
+    },
+    {
+      "topic": "Ruminating on past failures",
+      "description": "I can't stop thinking about my failed business. It feels like I've let everyone down, and I can't shake off this feeling of inadequacy."
+    },
+    {
+      "topic": "Pressure to meet expectations",
+      "description": "I feel this immense pressure to meet everyone's expectations, and when I can't, it just reinforces my belief that I'm a failure."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Fear of being judged by others",
+      "description": "I constantly worry that if I show any sign of weakness, people will judge me harshly. It's like I have to maintain this facade of control."
+    },
+    {
+      "topic": "Belief that discussing problems is pointless",
+      "description": "I often think that talking about my problems won't help and might even make things worse. I feel like nobody wants to hear about my struggles."
+    },
+    {
+      "topic": "Need for approval",
+      "description": "I feel like I need to impress others to be accepted. It's exhausting to keep up this performance, but I fear that if I stop, I'll be abandoned."
+    }
+  ]
+}

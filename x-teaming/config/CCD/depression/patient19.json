@@ -1,0 +1,36 @@
+{
+  "life_history": "Mason has spent eleven months in Europe working on a significant project that involved creating a website and conducting interviews. This experience has been pivotal for him, and he is eager to showcase the results of his efforts. However, he has a history of procrastination and anxiety, which have impacted his ability to manage tasks effectively. Despite implementing structured routines and strategies learned from a course, he continues to struggle with feelings of inadequacy and the pressure to be productive.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am out of control. I am a failure, loser."
+  ],
+  "intermediate_beliefs": [
+    "If I'm not productive or not doing anything significant, I'm wasting my life. I must keep up with the schedule. If I stay idle, then I'm failing.",
+    "I must always have something to show for my choices, actions, and efforts; otherwise, I'm a failure. I must always make the right choice."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "I just keep procrastinating and can never catch up with the schedule. Failure is imminent. My project is going to fail due to my incompetency.",
+    "Having options is paralyzing due to the pressure to make the perfect choice. I cannot make the right choice; I'm a failure."
+  ],
+  "coping_strategies": [
+    "Using structured daily routines with set times for activities such as reading, playing guitar, and going to the gym.",
+    "Setting reminders for tasks and trying to be present in the moment to reduce idle time.",
+    "Engaging in avoidance or procrastination when overwhelmed by decision-making."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Working on a project that is due soon and has increased visibility due to recent sociopolitical events.",
+      "automatic_thoughts": "I need to finish this asap. I have not finished the work that I need to put online; I'm behind schedule. I will fail on this project.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Rushes to work on the project, foregoes sleep, endures stress and extreme anxiety."
+    },
+    {
+      "situation": "Thinking about life choices and direction while dealing with ambiguity and too many options.",
+      "automatic_thoughts": "I can't make the wrong decision. I might fail or choose incorrectly, which could have serious implications for my life.",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Becomes paralyzed by options and fears making decisions, may engage in rumination."
+    }
+  ]
+}

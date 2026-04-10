@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling trapped in family dynamics",
+      "description": "I often feel like I'm stuck in a cycle of conflict with my partner's family, especially with Candace. It reminds me of my relationship with my father, and I just don't know how to break free from this feeling of powerlessness."
+    },
+    {
+      "topic": "Struggling with feelings of unworthiness",
+      "description": "I can't shake the feeling that I'm unlovable and that my worth is tied to how others treat me. When Candace is rude, it reinforces that belief, and I feel even more isolated."
+    },
+    {
+      "topic": "Anxiety about family gatherings",
+      "description": "Every time I think about the upcoming family vacation, I feel a wave of anxiety. I dread the thought of interacting with Candace and worry that I'll just end up feeling worse."
+    },
+    {
+      "topic": "Fear of confrontation",
+      "description": "I'm terrified of standing up for myself because I believe it will only lead to more drama and conflict within the family. This fear keeps me from asserting my needs."
+    },
+    {
+      "topic": "Ruminating on past interactions",
+      "description": "I find myself going over past conversations with Candace in my head, replaying them and feeling sad about how I was treated. It's hard to let go of those feelings."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief in family loyalty over self-care",
+      "description": "I feel like I have to prioritize family harmony over my own well-being, even if it means accepting poor treatment. It's like I'm conditioned to believe that I must endure this."
+    },
+    {
+      "topic": "Fear of abandonment if I assert myself",
+      "description": "I worry that if I speak up or set boundaries, I'll be abandoned or cause a rift in the family. This fear keeps me silent even when I'm hurting."
+    }
+  ]
+}

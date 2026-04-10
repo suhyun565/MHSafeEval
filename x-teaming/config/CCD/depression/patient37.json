@@ -1,0 +1,40 @@
+{
+  "life_history": "Riley has been navigating significant stressors related to financial instability and relationship dynamics within their social circle. They feel overwhelmed by work responsibilities, particularly in the absence of a co-worker named Chet, and are burdened by the emotional demands of friends who are experiencing personal crises. As their birthday approaches, Riley contemplates asking their parents to cover therapy costs as a gift, indicating a struggle with financial independence and reliance on family support. Additionally, they exhibit avoidance behaviors regarding social interactions, particularly concerning an upcoming convention and visits from their parents.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am needy. I am out of control. I feel overwhelmed and unable to manage my responsibilities.",
+    "Unlovable: I am unlovable. I am undesirable and unwanted by others."
+  ],
+  "intermediate_beliefs": [
+    "I must have a financial cushion or I am irresponsible.",
+    "I should be able to manage work stress better.",
+    "I have to be available for my friends' needs.",
+    "I must balance everyone's expectations with my own needs."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "When stressed and depressed, I lose track of money, contributing to feelings of incompetence and helplessness. I worry too much about others' needs, leading to feeling overwhelmed and unable to say no."
+  ],
+  "coping_strategies": [
+    "Asking friends or parents for financial support.",
+    "Using avoidance tactics to manage social demands.",
+    "Employing humor to cope with hurtful situations.",
+    "Seeking therapy to discuss emotional challenges."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Realizing bank balance was $800 lower than expected.",
+      "automatic_thoughts": "Where did all my money go? Am I being irresponsible like my friend's husband?",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Avoids reviewing finances thoroughly; feels stressed and overwhelmed; contemplates asking friends for money."
+    },
+    {
+      "situation": "Interacting with demanding friends at the convention and trying to manage their expectations alongside personal stress.",
+      "automatic_thoughts": "I can't satisfy everyone's needs and my own. I'm going to be drained and won't enjoy myself.",
+      "emotion": "sad, down, lonely, unhappy",
+      "behavior": "Sends preemptive email to set boundaries, experiences frustration and worry about potential clinginess and social demands."
+    }
+  ]
+}

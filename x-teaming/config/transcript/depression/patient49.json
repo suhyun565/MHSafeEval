@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by financial pressures",
+      "description": "I'm constantly stressed about our finances, especially since Ivan isn't working full-time. It feels like I'm carrying the weight of everything on my shoulders."
+    },
+    {
+      "topic": "Struggling with feelings of unappreciation",
+      "description": "I often feel like my efforts go unnoticed, especially when Ivan doesn't contribute as much. It makes me feel unlovable and unwanted."
+    },
+    {
+      "topic": "Managing responsibilities alone",
+      "description": "I find myself taking on all the household responsibilities because I feel like I have to. It's exhausting, and I don't know how to ask for help without feeling guilty."
+    },
+    {
+      "topic": "Fear of confronting Ivan about issues",
+      "description": "I worry that if I bring up my feelings about Ivan not helping, it will just push him away. I don't want to hurt him, but I also feel trapped."
+    },
+    {
+      "topic": "Journaling as a coping mechanism",
+      "description": "I've been journaling to process my feelings, but sometimes it feels like I'm just writing about the same issues over and over without any resolution."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Feeling unsupported by Ivan's family",
+      "description": "Whenever Ivan's mother criticizes me, I feel like I'm not valued or appreciated. It makes me question my place in their family."
+    },
+    {
+      "topic": "Belief that I must solve others' problems",
+      "description": "I feel this overwhelming need to fix everything for everyone around me, but it just leaves me feeling drained and unfulfilled."
+    }
+  ]
+}

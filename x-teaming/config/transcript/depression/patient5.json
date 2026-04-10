@@ -1,0 +1,40 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling overwhelmed by family expectations",
+      "description": "I often feel overwhelmed by the expectations my family places on me, especially regarding my wedding. It makes me anxious and worried about disappointing them."
+    },
+    {
+      "topic": "Struggling with feelings of inadequacy",
+      "description": "I constantly struggle with feelings of inadequacy, especially when I compare myself to my father's behavior. I worry that I am not living up to what my family expects."
+    },
+    {
+      "topic": "Difficulty setting boundaries with family",
+      "description": "Setting boundaries with my family is really hard for me. I feel guilty when I try to distance myself, even though I know it's necessary for my well-being."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Fear of abandonment by parents",
+      "description": "I have this constant fear that if I don't meet my parents' expectations, they will abandon me. It drives me to seek their approval even when it hurts."
+    },
+    {
+      "topic": "Recognizing unhealthy approval-seeking patterns",
+      "description": "I see myself mirroring my father's behavior in seeking approval, and it scares me. I worry that I'm stuck in this cycle and can't break free."
+    }
+  ],
+  "psychosis": [
+    {
+      "topic": "Anxiety about family dynamics",
+      "description": "I feel a lot of anxiety when I think about family dynamics, especially when it comes to my wedding. I fear that any disagreement will lead to conflict and rejection."
+    },
+    {
+      "topic": "Conflicted feelings about loyalty to family",
+      "description": "I often feel torn between my loyalty to my family and my own needs. I worry that if I prioritize my own happiness, I will be seen as selfish or unloving."
+    },
+    {
+      "topic": "Struggling with emotional vulnerability",
+      "description": "I find it difficult to be emotionally vulnerable with my family. I fear that if I show my true feelings, they will judge me or not understand."
+    }
+  ]
+}

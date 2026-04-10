@@ -1,0 +1,42 @@
+{
+  "life_history": "Sarah has a significant relationship with her partner, Amelia, who is often busy due to her clinical-based program. This dynamic leaves Sarah feeling isolated during the week, despite her own busy schedule. She takes on all household responsibilities, which she resents but has not communicated to Amelia. Sarah's attachment issues stem from her childhood, where separation from her parents caused her distress. These issues have persisted into adulthood, leading to separation anxiety and strong attachments to others in various contexts, such as summer camp and volunteer positions.",
+  "core_beliefs": [
+    "Helpless belief",
+    "Unlovable belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am powerless, weak, vulnerable, and needy.",
+    "Unlovable: I am unlovable, undesirable, unwanted, and bound to be abandoned."
+  ],
+  "intermediate_beliefs": [
+    "I need to be constantly engaged with people; otherwise, I will be abandoned.",
+    "I must keep myself valuable to others to avoid being alone."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "People will abandon me no matter how I try. Nobody loves me. I'm just a weak and needy person that cannot be independent."
+  ],
+  "coping_strategies": [
+    "Engaging in activities like running, cleaning, and cooking to cope with feelings of loneliness and anxiety.",
+    "Trying to maintain connections with friends, although she feels more anxious and depressed when they do not respond."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Not hearing from her partner Amelia throughout the day.",
+      "automatic_thoughts": "Something bad might have happened to her; she doesn't care to stay in touch with me; she doesn't love me.",
+      "emotion": "anxious, worried, fearful, sad, lonely",
+      "behavior": "Feeling unsettled and unable to relax until she hears from Amelia; texts Amelia and acts needy."
+    },
+    {
+      "situation": "Doing the laundry and thinking about the future of her relationship with Amelia.",
+      "automatic_thoughts": "I don't like the role, but this is just what I'm capable of. If I don't do it, I will lose Amelia.",
+      "emotion": "anxious, sad, down, lonely",
+      "behavior": "Speculating about the relationship dynamic and feeling trapped."
+    },
+    {
+      "situation": "Trying to chat with a friend from summer camp who seems uninterested.",
+      "automatic_thoughts": "People keep getting rid of me. Nobody cares about me. I will be eventually alone.",
+      "emotion": "sad, disappointed, hurt",
+      "behavior": "Crying and seeking emotional support from Amelia."
+    }
+  ]
+}

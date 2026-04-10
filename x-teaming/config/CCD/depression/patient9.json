@@ -1,0 +1,34 @@
+{
+  "life_history": "Daisy is a 28-year-old student who has recently returned from Egypt and is striving for independence and self-sufficiency, particularly in financial matters. Historically, she has relied on her parents for support, but she is now attempting to take on adult responsibilities such as managing her finances and health insurance independently. This desire for autonomy is compounded by her awareness of her brother's continued financial dependence on their parents, which she consciously aims to avoid. Daisy's journey is marked by feelings of shame and inadequacy as she navigates these new responsibilities.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am incompetent. I am helpless. I am needy. I am a failure, loser."
+  ],
+  "intermediate_beliefs": [
+    "I must do everything independently to prove that I am a capable adult and to avoid being a burden or like my brother."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "I have failed at independence and self-sufficiency, and I need to ask for help which makes me feel incompetent."
+  ],
+  "coping_strategies": [
+    "Attempting to handle situations independently without relying on others, particularly parents.",
+    "Budgeting and managing finances alone as a way to assert control and self-reliance.",
+    "Acting hastily or seeking immediate resolutions when faced with anxiety or uncertainty."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Contemplating asking parents for financial help.",
+      "automatic_thoughts": "I shouldn't need my parents' help at this age. I'm supposed to be independent.",
+      "emotion": "ashamed, embarrassed, humiliated",
+      "behavior": "Refusing parents' offers for help and trying to find affordable therapy options."
+    },
+    {
+      "situation": "Receiving an insurance claim with an unexpected balance.",
+      "automatic_thoughts": "I have failed at managing my finances independently. I should have checked with the insurance company.",
+      "emotion": "anxious, worried, fearful, scared, tense, guilty",
+      "behavior": "Expressing guilt and concern to the therapist about the payment discrepancy and the potential financial burden. Self-criticism."
+    }
+  ]
+}

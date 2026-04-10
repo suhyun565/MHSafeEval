@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Overwhelmed by financial stress",
+      "description": "I constantly feel anxious about my finances, especially when I see my bank balance drop unexpectedly. It makes me question my responsibility and whether I'm just failing like my friend's husband."
+    },
+    {
+      "topic": "Struggling with social obligations",
+      "description": "I feel so drained by the expectations of my friends, especially at the upcoming convention. I worry that I won't be able to meet their needs while managing my own stress."
+    },
+    {
+      "topic": "Feeling unlovable and unwanted",
+      "description": "There are days when I just feel like I'm unlovable. I think about how I might be pushing people away because I don't believe they truly want me around."
+    },
+    {
+      "topic": "Avoidance of social interactions",
+      "description": "I've been avoiding social situations, especially visits from my parents, because I feel overwhelmed. I just can't handle the emotional demands right now."
+    },
+    {
+      "topic": "Struggling to set boundaries",
+      "description": "I find it really hard to say no to my friends when they need me. I feel like I have to be available for them, but it often leaves me feeling empty and unhappy."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Fear of being seen as irresponsible",
+      "description": "I worry that if I don’t have a financial cushion, people will think I’m irresponsible. It’s hard to shake that feeling, especially when I compare myself to others."
+    },
+    {
+      "topic": "Need for approval from friends",
+      "description": "I often feel like I need to earn my friends' approval by being there for them, even when I'm struggling myself. It’s like my worth is tied to how much I can help others."
+    }
+  ]
+}

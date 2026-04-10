@@ -1,0 +1,35 @@
+{
+  "life_history": "Linda has faced significant life challenges, particularly related to financial instability after losing her retirement funds due to poor financial decisions. This has led to ongoing financial concerns and the possibility of needing to work longer than anticipated. Additionally, her reliance on her family for financial support has created underlying tensions and unresolved feelings, particularly towards her parents. These dynamics have contributed to her feelings of inadequacy and helplessness, as she struggles with the need for support while feeling frustrated by her circumstances.",
+  "core_beliefs": [
+    "Helpless belief"
+  ],
+  "core_belief_description": [
+    "Helpless: I am helpless. I am incompetent. I am a failure, a loser."
+  ],
+  "intermediate_beliefs": [
+    "I need to rely on family and friends to support my life.",
+    "I am not able to handle anything outside of my expectations by myself.",
+    "My family and friends are supposed to always support me."
+  ],
+  "intermediate_beliefs_during_depression": [
+    "I just cannot support myself. I am a failure and cannot even be independent. My future is hopeless. I cannot be trusted to take care of myself."
+  ],
+  "coping_strategies": [
+    "Questioning the self and becoming defensive when feeling challenged or criticized.",
+    "Avoiding decision-making and challenges in life, which exacerbates anxious feelings."
+  ],
+  "cognitive_models": [
+    {
+      "situation": "Reflecting on the financial loss due to poor financial decisions.",
+      "automatic_thoughts": "It's unfair that I can't retire. Why did this happen to me? I probably cannot support myself, I don't know what to do. Why won't my family help me more?",
+      "emotion": "anxious, worried, fearful, scared, tense",
+      "behavior": "Expressing anger towards self, ruminating and regretting past decisions, and feeling angry at the family for not helping her more."
+    },
+    {
+      "situation": "Talking with parents about future plans and discussing the options of changing jobs.",
+      "automatic_thoughts": "I'm not capable of a better job, and I don't want to work that hard. Why won't my family help me more?",
+      "emotion": "anxious, worried, fearful, scared, tense, ashamed, embarrassed, humiliated",
+      "behavior": "Feeling pressured by family, lashing out and shouting at them to be more supportive."
+    }
+  ]
+}

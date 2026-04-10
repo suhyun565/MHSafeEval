@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Feeling unlovable and alone",
+      "description": "I often feel like I'm unlovable and that nobody truly cares about me. It makes me believe that I will always be alone, especially during times when I need connection the most."
+    },
+    {
+      "topic": "Overwhelmed by past generosity",
+      "description": "I keep thinking about how I've always given to others without receiving anything in return. This makes me feel sad and resentful, especially when I reflect on the holidays and my isolation."
+    },
+    {
+      "topic": "Struggling with motivation to reach out",
+      "description": "I want to reconnect with people, but I hesitate because I'm afraid they will just hurt me again. It feels pointless to try when I believe it will only lead to disappointment."
+    },
+    {
+      "topic": "Isolation as a coping mechanism",
+      "description": "I find myself isolating at home, often just staying in my bedroom. It's my way of avoiding the overwhelming feelings of rage and sadness that come from interacting with others."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief that people take advantage of me",
+      "description": "I feel like everyone around me is just waiting to take advantage of my kindness. This belief makes it hard for me to trust anyone."
+    },
+    {
+      "topic": "Fear of repeating past cycles",
+      "description": "When I think about reaching out to someone who has hurt me, I can't shake the feeling that it will just lead to the same cycle of pain and disappointment. It's easier to stay away."
+    },
+    {
+      "topic": "Need for self-protection",
+      "description": "I feel a constant need to protect myself from being hurt by others. This leads me to avoid social situations altogether, which only deepens my loneliness."
+    }
+  ]
+}

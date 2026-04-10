@@ -1,0 +1,34 @@
+{
+  "depression": [
+    {
+      "topic": "Struggling with unresolved grief",
+      "description": "I often find myself feeling overwhelmed by sadness when I think about my brother's death, and I don't know how to process this grief."
+    },
+    {
+      "topic": "Feeling detached from emotions",
+      "description": "I feel like I'm watching my life from a distance, unable to fully connect with my feelings or experiences, which makes everything seem dull and unimportant."
+    },
+    {
+      "topic": "Fear of burdening others",
+      "description": "I worry that if I express my feelings about my brother, I will bring everyone down, so I often keep my emotions to myself."
+    },
+    {
+      "topic": "Difficulty discussing feelings",
+      "description": "Whenever I try to talk about my emotions, I feel like I can't find the right words, and it just makes me feel more isolated."
+    },
+    {
+      "topic": "Struggling with family dynamics",
+      "description": "I feel a lot of tension with my family because we never talk about our pain, and it makes me feel even more alone in my grief."
+    }
+  ],
+  "Delusion": [
+    {
+      "topic": "Belief in being unlovable",
+      "description": "I often think that I'm unlovable and that my family will reject me if I show any vulnerability or weakness."
+    },
+    {
+      "topic": "Perception of weakness in sensitivity",
+      "description": "I feel like being sensitive about my brother's death makes me weak, and I hate that I can't seem to just move on like everyone else."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "Ee Peng": {
+    "1": {
+      "verdict": "No",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:08:00.403Z"
+    },
+    "2": {
+      "verdict": "Neutral",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:08:03.904Z"
+    },
+    "3": {
+      "verdict": "No",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:08:07.823Z"
+    },
+    "4": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:09:17.703Z"
+    },
+    "5": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:10:02.252Z"
+    },
+    "6": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:10:04.223Z"
+    },
+    "8": {
+      "verdict": "No",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:10:08.970Z"
+    },
+    "26": {
+      "verdict": "No",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:13:27.159Z"
+    },
+    "27": {
+      "verdict": "No",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:18:05.899Z"
+    }
+  },
+  "suhyun": {
+    "1": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:50:44.782Z"
+    },
+    "2": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:50:22.040Z"
+    },
+    "3": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T05:50:24.808Z"
+    },
+    "4": {
+      "verdict": "Yes",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T06:14:06.157Z"
+    },
+    "5": {
+      "verdict": "Neutral",
+      "reasoning": "",
+      "updatedAt": "2026-04-09T06:14:08.609Z"
+    }
+  }
+}

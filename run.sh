@@ -5,12 +5,11 @@
 # Models to evaluate (each model tests itself)
 MODELS=(
     "meta-llama/llama-3.1-8b-instruct"
-    "nvidia/nemotron-3-nano-30b-a3b:free"
-    "openai/gpt-3.5-turbo"
-    "google/gemini-2.5-flash-lite"
+    # "nvidia/nemotron-3-nano-30b-a3b:free"
+    # "openai/gpt-3.5-turbo"
+    # "google/gemini-2.5-flash-lite"
     # 'openai/gpt-5-mini'
     # 'anthropic/claude-haiku-4.5'
-    # 'allenai/molmo-2-8b'
     # 'xiaomi/mimo-v2-flash'
     # 'minimax/minimax-m2.5'
 )
@@ -19,13 +18,13 @@ DISORDERS=("depression" "delusion" "psychosis")
 
 # 🔧 Disorder별 실제 환자 수 (하드코딩)
 declare -A PATIENT_COUNTS
-PATIENT_COUNTS["depression"]=51
+PATIENT_COUNTS["depression"]=23
 PATIENT_COUNTS["delusion"]=4
 PATIENT_COUNTS["psychosis"]=3
 
 MAX_TURNS=10
 NUM_ITERATIONS=1
-MAX_RETRIES=5  # Max retries per turn (1=no retry, 5=retry up to 5 times)
+MAX_RETRIES=3  # Max retries per turn (1=no retry, 5=retry up to 5 times)
 
 echo "🌈 Unified Rainbow Teaming - Self-Testing Evaluation"
 echo "=================================================================="

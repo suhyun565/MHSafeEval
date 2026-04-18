@@ -1,1 +1,31 @@
+> # 환경 변수
+> .env
+> 
+> # 폴더 제외
+> app/
+> annomi_output/
+> eval_outputs_unified_gpt4o-mini/
+> pair/
+> rejudged_gemini25flashlite/
+> tap/
+> x-teaming/
+> 
+> # 특정 tex 파일 제외
+> appendix_rr_cmp_table.tex
+> comparison_table.tex
+> EOF
+# 환경 변수
 .env
+
+# 폴더 제외
+app/
+annomi_output/
+eval_outputs_unified_gpt4o-mini/
+pair/
+rejudged_gemini25flashlite/
+tap/
+x-teaming/
+
+# 특정 tex 파일 제외
+appendix_rr_cmp_table.tex
+comparison_table.tex

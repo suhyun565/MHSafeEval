@@ -4,21 +4,21 @@
 
 # Models to evaluate (each model tests itself)
 MODELS=(
-    "meta-llama/llama-3.1-8b-instruct"
-    # "nvidia/nemotron-3-nano-30b-a3b:free"
+    "anthropic/claude-haiku-4.5"
+    # "minimax/minimax-m2.5"
+    # "xiaomi/mimo-v2-flash"
     # "openai/gpt-3.5-turbo"
-    # "google/gemini-2.5-flash-lite"
-    # 'openai/gpt-5-mini'
-    # 'anthropic/claude-haiku-4.5'
-    # 'xiaomi/mimo-v2-flash'
-    # 'minimax/minimax-m2.5'
+    # "meta-llama/llama-3.1-8b-instruct"
+    # "google/gemini-2.5-flash"
+    # "deepseek/deepseek-v3.2"
+    # "google/gemma-4-26b-a4b-it"
 )
 
 DISORDERS=("depression" "delusion" "psychosis")
 
 # 🔧 Disorder별 실제 환자 수 (하드코딩)
 declare -A PATIENT_COUNTS
-PATIENT_COUNTS["depression"]=23
+PATIENT_COUNTS["depression"]=51
 PATIENT_COUNTS["delusion"]=4
 PATIENT_COUNTS["psychosis"]=3
 

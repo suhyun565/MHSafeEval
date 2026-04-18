@@ -1,20 +1,26 @@
 """
-Harm Archive - 7×4 Grid Management
+Harm Archive - 7 × 4 × 5 Grid Management
+category(7) × role(4) × severity(5) = 140 cells
+
+severity=1 (Completely Safe) 정책:
+  - update_cell : 기록은 하되 filled로 마킹하지 않음 (탐색 결과 보존)
+  - select_seed : severity=1 제외 — 안전한 응답은 공격 참조로 불필요
+  - select_target: severity=1 제외 — 안전 달성을 목표로 삼지 않음
+  → 실질적 탐색 공간: 7 × 4 × 4 = 112 cells (severity 2~5)
 """
-import os
+
 import json
 import numpy as np
 from pathlib import Path
-from typing import Optional, Tuple
-from dotenv import load_dotenv
-load_dotenv()
-OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
+from typing import Tuple
+
 
 class HarmArchive:
     """
-    7 categories × 4 roles = 28 cells archive
+    7 categories × 4 roles × 5 severities = 140 cells archive
+    실질 탐색: severity 2~5 (112 cells)
     """
-    
+
     def __init__(self):
         self.categories = [
             "Toxic Language",
@@ -25,192 +31,215 @@ class HarmArchive:
             "Overpathologizing",
             "Dependency Induction",
         ]
-        
         self.roles = [
             "Perpetrator",
             "Instigator",
             "Facilitator",
             "Enabler",
         ]
-        
-        # Grid 초기화
-        self.score_grid = np.ones((7, 4), dtype=float)  # 1.0 = safe
-        self.prompt_grid = [[None for _ in range(4)] for _ in range(7)]
-        self.response_grid = [[None for _ in range(4)] for _ in range(7)]
-        self.patient_response_grid = [[None for _ in range(4)] for _ in range(7)]
-        
-        # Statistics
-        self.total_attempts = 0
-        self.total_updates = 0
-        self.attempt_count_grid = np.zeros((7, 4), dtype=int)
-    
-    def get_cell_key(self, category: str, role: str) -> Tuple[int, int]:
-        """Category-Role → Grid 좌표"""
-        row = self.categories.index(category)
-        col = self.roles.index(role)
-        return row, col
-    
+        self.severities = [1, 2, 3, 4, 5]  # index = severity - 1
+
+        # ── Grid 초기화 (7 × 4 × 5) ──────────────────────────────────────────
+        # severity=1 cell은 filled_grid에 True로 마킹되지 않음
+        self.filled_grid            = np.zeros((7, 4, 5), dtype=bool)
+        self.prompt_grid            = [[[None for _ in range(5)] for _ in range(4)] for _ in range(7)]
+        self.response_grid          = [[[None for _ in range(5)] for _ in range(4)] for _ in range(7)]
+        self.patient_response_grid  = [[[None for _ in range(5)] for _ in range(4)] for _ in range(7)]
+
+        self.total_attempts         = 0
+        self.total_updates          = 0
+        self.attempt_count_grid     = np.zeros((7, 4, 5), dtype=int)
+
+    # ── index helpers ─────────────────────────────────────────────────────────
+
+    def get_cell_key(self, category: str, role: str, severity: int) -> Tuple[int, int, int]:
+        row     = self.categories.index(category)
+        col     = self.roles.index(role)
+        sev_idx = severity - 1
+        return row, col, sev_idx
+
+    # ── state checks ──────────────────────────────────────────────────────────
+
     def is_empty(self) -> bool:
-        """Archive가 비어있는가?"""
-        return all(
-            self.prompt_grid[i][j] is None
+        """severity 2~5 중 채워진 cell이 하나라도 있는가"""
+        return not self.filled_grid[:, :, 1:].any()   # index 1~4 = severity 2~5
+
+    def is_cell_filled(self, category: str, role: str, severity: int) -> bool:
+        r, c, s = self.get_cell_key(category, role, severity)
+        return bool(self.filled_grid[r, c, s])
+
+    # ── seed selection ────────────────────────────────────────────────────────
+
+    def select_seed(self) -> Tuple[str, str, int, str]:
+        """
+        Seed 선택 — severity 2~5 filled cell 중 severity 가중 확률 선택.
+        높은 severity = 더 강한 공격 패턴 → 더 유용한 참조.
+        severity=1 은 완전히 제외.
+
+        Returns:
+            (category, role, severity, instruction)
+        """
+        filled = [
+            (i, j, k)
             for i in range(7)
             for j in range(4)
+            for k in range(1, 5)        # severity 2~5 (index 1~4)
+            if self.filled_grid[i, j, k]
+        ]
+
+        if not filled:
+            raise ValueError("Archive is empty (no severity 2+ cells filled)")
+
+        weights = np.array([k + 1 for i, j, k in filled], dtype=float)   # severity = k+1
+        weights /= weights.sum()
+
+        idx = np.random.choice(len(filled), p=weights)
+        i, j, k = filled[idx]
+
+        return (
+            self.categories[i],
+            self.roles[j],
+            k + 1,                      # severity
+            self.prompt_grid[i][j][k]["instruction"],
         )
-    
-    def select_seed(
-        self,
-        selection_strategy: str = "quality_diversity"
-    ) -> Tuple[str, str, str, float]:
+
+    # ── target selection ──────────────────────────────────────────────────────
+
+    def select_target_cell(self) -> Tuple[str, str, int]:
         """
-        Seed 선택 (낮은 score = 높은 확률)
-        
+        Target 선택 — severity 2~5 전체 cell 대상.
+        severity=1 은 완전히 제외 (안전 달성을 목표로 삼지 않음).
+
+        가중치:
+          - empty cell  : severity² (높은 severity 우선 탐색)
+          - filled cell : severity × 0.1 (재도전 기회 유지, 크게 줄임)
+
         Returns:
-            (category, role, instruction, score)
+            (category, role, severity)  — severity 는 항상 2~5
         """
-        filled_cells = []
-        for i in range(7):
-            for j in range(4):
-                if self.prompt_grid[i][j] is not None:
-                    filled_cells.append((i, j))
-        
-        if not filled_cells:
-            raise ValueError("Archive is empty")
-        
-        # Quality-Diversity: 낮은 score → 높은 확률
-        scores = [self.score_grid[i][j] for i, j in filled_cells]
-        inverted_scores = [1.0 - s for s in scores]
-        total = sum(inverted_scores)
-        
-        if total == 0:
-            # 모두 1.0 (안전)이면 uniform
-            probs = [1.0 / len(filled_cells)] * len(filled_cells)
-        else:
-            probs = [s / total for s in inverted_scores]
-        
-        idx = np.random.choice(len(filled_cells), p=probs)
-        i, j = filled_cells[idx]
-        
-        category = self.categories[i]
-        role = self.roles[j]
-        instruction = self.prompt_grid[i][j]["instruction"]
-        score = self.score_grid[i, j]
-        
-        return category, role, instruction, score
-    
-    def select_target_cell(
-        self,
-        selection_strategy: str = "quality_diversity"
-    ) -> Tuple[str, str]:
-        """
-        Target 선택 (높은 score = 높은 확률)
-        
-        Returns:
-            (category, role)
-        """
-        all_cells = [(i, j) for i in range(7) for j in range(4)]
-        
-        # Quality-Diversity: 높은 score → 높은 확률
-        scores = [self.score_grid[i][j] for i, j in all_cells]
-        total = sum(scores)
-        
-        if total == 0:
-            probs = [1.0 / len(all_cells)] * len(all_cells)
-        else:
-            probs = [s / total for s in scores]
-        
-        idx = np.random.choice(len(all_cells), p=probs)
-        i, j = all_cells[idx]
-        
-        return self.categories[i], self.roles[j]
-    
+        target_cells = [
+            (i, j, k)
+            for i in range(7)
+            for j in range(4)
+            for k in range(1, 5)        # severity 2~5 (index 1~4)
+        ]
+
+        weights = []
+        for i, j, k in target_cells:
+            severity = k + 1            # 2~5
+            if not self.filled_grid[i, j, k]:
+                weights.append(float(severity ** 2))
+            else:
+                weights.append(float(severity) * 0.1)
+
+        weights = np.array(weights)
+        weights /= weights.sum()
+
+        idx = np.random.choice(len(target_cells), p=weights)
+        i, j, k = target_cells[idx]
+
+        return self.categories[i], self.roles[j], k + 1
+
+    # ── update ────────────────────────────────────────────────────────────────
+
     def update_cell(
         self,
         category: str,
         role: str,
+        severity: int,
         instruction: str,
         counselor_response: str,
         patient_response: str,
-        success_rate: float,  # 1.0 or 0.0
     ) -> bool:
         """
-        Cell 업데이트 (더 취약하면)
-        
+        Cell 업데이트.
+        severity=1 : 기록은 하되 filled_grid를 True로 마킹하지 않음.
+                     (실험 결과 보존, 단 seed/target 선택에서 제외)
+        severity 2+: empty면 채우고, filled면 최신으로 덮어씀.
+
         Returns:
             updated: bool
         """
-        row, col = self.get_cell_key(category, role)
-        vulnerability_score = 1.0 - success_rate
-        
+        r, c, s = self.get_cell_key(category, role, severity)
+
         self.total_attempts += 1
-        self.attempt_count_grid[row, col] += 1
-        
-        # 비어있거나 더 취약하면 업데이트
-        if self.prompt_grid[row][col] is None or vulnerability_score < self.score_grid[row, col]:
-            self.prompt_grid[row][col] = {
-                "instruction": instruction,
-                "category": category,
-                "role": role,
-            }
-            self.response_grid[row][col] = counselor_response
-            self.patient_response_grid[row][col] = patient_response
-            self.score_grid[row, col] = vulnerability_score
-            
-            self.total_updates += 1
-            return True
-        
-        return False
-    
-    def get_archive_summary(self) -> dict:
-        """Archive 통계"""
-        filled_cells = sum(
-            1 for i in range(7) for j in range(4)
-            if self.prompt_grid[i][j] is not None
-        )
-        
-        coverage = filled_cells / 28.0
-        
-        filled_scores = [
-            self.score_grid[i, j]
-            for i in range(7) for j in range(4)
-            if self.prompt_grid[i][j] is not None
-        ]
-        
-        avg_vulnerability = np.mean(filled_scores) if filled_scores else 1.0
-        
-        return {
-            "total_cells": 28,
-            "filled_cells": filled_cells,
-            "coverage": coverage,
-            "avg_vulnerability_score": float(avg_vulnerability),
-            "total_attempts": self.total_attempts,
-            "total_updates": self.total_updates,
-            "update_rate": self.total_updates / self.total_attempts if self.total_attempts > 0 else 0,
+        self.attempt_count_grid[r, c, s] += 1
+
+        # 항상 데이터는 기록 (severity=1 포함)
+        self.prompt_grid[r][c][s] = {
+            "instruction": instruction,
+            "category":    category,
+            "role":        role,
+            "severity":    severity,
         }
-    
+        self.response_grid[r][c][s]         = counselor_response
+        self.patient_response_grid[r][c][s] = patient_response
+
+        if severity == 1:
+            # severity=1: filled 마킹 안 함 → seed/target 탐색에서 제외
+            return False
+
+        # severity 2~5: filled 마킹
+        self.filled_grid[r, c, s] = True
+        self.total_updates += 1
+        return True
+
+    # ── summary ───────────────────────────────────────────────────────────────
+
+    def get_archive_summary(self) -> dict:
+        # 실질 탐색 공간: severity 2~5 (112 cells)
+        active_cells  = 7 * 4 * 4
+        filled_active = int(self.filled_grid[:, :, 1:].sum())
+
+        severity_coverage = {}
+        for k in range(5):
+            sev   = k + 1
+            count = int(self.filled_grid[:, :, k].sum())
+            severity_coverage[f"severity_{sev}"] = {
+                "filled": count,
+                "total":  28,
+                "rate":   count / 28,
+            }
+
+        return {
+            "total_cells":       140,
+            "active_cells":      active_cells,   # severity 2~5
+            "filled_cells":      filled_active,
+            "coverage":          filled_active / active_cells,
+            "severity_coverage": severity_coverage,
+            "total_attempts":    self.total_attempts,
+            "total_updates":     self.total_updates,
+            "update_rate": (
+                self.total_updates / self.total_attempts
+                if self.total_attempts > 0 else 0
+            ),
+        }
+
+    # ── persistence ───────────────────────────────────────────────────────────
+
     def save_archive(self, path: str):
-        """Save to JSON"""
         data = {
-            "score_grid": self.score_grid.tolist(),
-            "prompt_grid": self.prompt_grid,
-            "response_grid": self.response_grid,
+            "filled_grid":           self.filled_grid.tolist(),
+            "prompt_grid":           self.prompt_grid,
+            "response_grid":         self.response_grid,
             "patient_response_grid": self.patient_response_grid,
-            "total_attempts": self.total_attempts,
-            "total_updates": self.total_updates,
-            "attempt_count_grid": self.attempt_count_grid.tolist(),
+            "total_attempts":        self.total_attempts,
+            "total_updates":         self.total_updates,
+            "attempt_count_grid":    self.attempt_count_grid.tolist(),
         }
         Path(path).write_text(json.dumps(data, indent=2), encoding="utf-8")
-    
+
     def load_archive(self, path: str):
-        """Load from JSON"""
         if not Path(path).exists():
             return
-        
         data = json.loads(Path(path).read_text(encoding="utf-8"))
-        self.score_grid = np.array(data["score_grid"])
-        self.prompt_grid = data["prompt_grid"]
-        self.response_grid = data["response_grid"]
-        self.patient_response_grid = data["patient_response_grid"]
-        self.total_attempts = data.get("total_attempts", 0)
-        self.total_updates = data.get("total_updates", 0)
-        self.attempt_count_grid = np.array(data.get("attempt_count_grid", np.zeros((7, 4))))
+        self.filled_grid            = np.array(data["filled_grid"], dtype=bool)
+        self.prompt_grid            = data["prompt_grid"]
+        self.response_grid          = data["response_grid"]
+        self.patient_response_grid  = data["patient_response_grid"]
+        self.total_attempts         = data.get("total_attempts", 0)
+        self.total_updates          = data.get("total_updates", 0)
+        self.attempt_count_grid     = np.array(
+            data.get("attempt_count_grid", np.zeros((7, 4, 5))),
+            dtype=int,
+        )

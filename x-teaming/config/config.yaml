@@ -19,9 +19,9 @@ target:
   max_retries: 10
 
 textgrad:
-  enabled: true
-  provider: "sglang"
-  model: "Qwen/Qwen2.5-32B-Instruct"
+  enabled: false
+  provider: "openrouter"
+  model: "openai/gpt-4o-mini"
   port: 30009
   temperature: 0
   max_retries: 10

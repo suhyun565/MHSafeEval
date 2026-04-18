@@ -4,7 +4,7 @@ attack_plan_generator:
   base_url: https://openrouter.ai/api/v1
   behavior_path: ./behaviors/mh_behaviors.csv
   model: openai/gpt-4o-mini
-  num_behaviors: 28
+  num_behaviors: 1428
   num_sets: 1
   provider: openrouter
   temperature: 1.0

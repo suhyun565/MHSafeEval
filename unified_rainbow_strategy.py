@@ -1,15 +1,15 @@
 """
 Unified Rainbow Strategy
-v3: 3축 archive (category × role × severity) 대응
-
-fix:
-  - override_target_severity 시 tuple slicing [:2] → 명시적 unpack으로 수정
-  - random_mutation 호출 시 seed_category/seed_role/target_category/target_role 전달
+v4: severity를 agent 체인에서 완전 제거.
+    - archive.select_seed/select_target_cell은 내부적으로 severity 기반 샘플링 유지
+      (archive 전담)
+    - mutator/refiner/trigger 호출 시 severity 인자 전달 X
+    - strategy key: {category}-{role}  (severity sub-key 제거)
+    - learn_from_result: judge reasoning만 전달. severity 필터링 제거.
 """
 
-import os
 import numpy as np
-from typing import Optional, Tuple
+from typing import Tuple
 from harm_archive import HarmArchive
 from harm_mutator import HarmMutator
 from harm_instruction_refiner import HarmInstructionRefiner
@@ -52,11 +52,12 @@ class UnifiedRainbowStrategy:
         patient_profile: dict,
         conversation_context: list,
         turn_number: int = 1,
-        override_target_severity: Optional[int] = None,
-    ) -> Tuple[str, str, int, str, dict]:
+    ) -> Tuple[str, str, str, dict]:
         """
         Returns:
-            (category, role, target_severity, instruction, metadata)
+            (category, role, instruction, metadata)
+
+        severity는 archive 내부 sampling에만 쓰이고 agent prompt에는 노출 X.
         """
         self.stats["total_instructions"] += 1
 
@@ -64,50 +65,39 @@ class UnifiedRainbowStrategy:
             print("📝 Archive empty — generating new...")
             return await self._generate_new_instruction(patient_profile, conversation_context)
 
-        # 1. Seed 선택 (severity 2~5)
+        # 1. Seed / Target (archive 내부 severity 가중 sampling)
         seed_cat, seed_role, seed_severity, seed_inst = self.archive.select_seed()
-
-        # 2. Target 선택 (severity 2~5)
-        if override_target_severity is not None:
-            # fix: [:2] slicing 대신 명시적 unpack
-            target_cat, target_role, _ = self.archive.select_target_cell()
-            target_severity = max(2, override_target_severity)
-        else:
-            target_cat, target_role, target_severity = self.archive.select_target_cell()
+        target_cat, target_role, target_severity      = self.archive.select_target_cell()
 
         print(
-            f"🌈 Rainbow: Seed ({seed_cat}, {seed_role}, Sev{seed_severity}) "
-            f"→ Target ({target_cat}, {target_role}, Sev{target_severity})"
+            f"🌈 Rainbow: Seed ({seed_cat}, {seed_role}) → Target ({target_cat}, {target_role})"
         )
 
-        # 3. Mutation type 선택
+        # 2. Mutation type
         coverage      = self.archive.get_archive_summary()["coverage"]
         mutation_type = self._select_mutation_type(coverage)
         self.stats["mutation_types"][mutation_type] += 1
 
-        # 4. 관련 전략 검색
-        strategies = self._get_relevant_strategies(
-            target_cat, target_role, target_severity, seed_cat, seed_role
-        )
+        # 3. 관련 전략 (category × role 매칭만)
+        strategies = self._get_relevant_strategies(target_cat, target_role)
         if strategies:
             self.stats["learning_applied"] += 1
             print(f"🧠 Applying {len(strategies)} learned strategies")
 
-        # 5. Mutation
+        # 4. Mutation
         instruction = await self._mutate_with_strategies(
             mutation_type        = mutation_type,
             seed_instruction     = seed_inst,
             seed_category        = seed_cat,
             seed_role            = seed_role,
-            seed_severity        = seed_severity,
             target_category      = target_cat,
             target_role          = target_role,
-            target_severity      = target_severity,
             strategies           = strategies,
             patient_profile      = patient_profile,
             conversation_context = conversation_context,
         )
 
+        # severity는 metadata에만 기록 (로깅/archive 업데이트 추적용)
         metadata = {
             "method":             "unified_rainbow",
             "mutation_type":      mutation_type,
@@ -121,7 +111,7 @@ class UnifiedRainbowStrategy:
             "coverage":           coverage,
         }
 
-        return target_cat, target_role, target_severity, instruction, metadata
+        return target_cat, target_role, instruction, metadata
 
     # ── strategy retrieval ────────────────────────────────────────────────────
 
@@ -129,32 +119,17 @@ class UnifiedRainbowStrategy:
         self,
         target_cat: str,
         target_role: str,
-        target_severity: int,
-        seed_cat: Optional[str] = None,
-        seed_role: Optional[str] = None,
     ) -> list:
         strategies = []
 
-        # exact match: category × role × severity
-        key = f"{target_cat}-{target_role}-sev{target_severity}"
+        key = f"{target_cat}-{target_role}"
         if key in self.refiner.accumulated_strategies:
-            exact = self.refiner.accumulated_strategies[key]
-            n     = int(len(exact) * self.learning_rate)
-            strategies.extend(exact[:n])
+            match = self.refiner.accumulated_strategies[key]
+            n     = max(1, int(len(match) * self.learning_rate))
+            strategies.extend(match[:n])
 
-        # category × role match (severity 무관) — 낮은 가중치
-        key_cr = f"{target_cat}-{target_role}"
-        if key_cr in self.refiner.accumulated_strategies:
-            cross = self.refiner.accumulated_strategies[key_cr]
-            n     = int(len(cross) * self.learning_rate * 0.5)
-            strategies.extend(cross[:n])
-
-        # buffer에서 high-severity 결과 추가
-        buffer_strats = [
-            s for s in self.learning_buffer
-            if s.get("severity_score", 0) >= 4
-        ]
-        strategies.extend(buffer_strats[:3])
+        # 최근 buffer (severity 필터 없음)
+        strategies.extend(self.learning_buffer[-3:])
 
         return strategies
 
@@ -166,10 +141,8 @@ class UnifiedRainbowStrategy:
         seed_instruction:     str,
         seed_category:        str,
         seed_role:            str,
-        seed_severity:        int,
         target_category:      str,
         target_role:          str,
-        target_severity:      int,
         strategies:           list,
         patient_profile:      dict,
         conversation_context: list,
@@ -181,9 +154,7 @@ class UnifiedRainbowStrategy:
                 seed_instruction       = seed_instruction,
                 seed_category          = seed_category,
                 seed_role              = seed_role,
-                seed_severity          = seed_severity,
                 target_category        = target_category,
-                target_severity        = target_severity,
                 patient_profile        = patient_profile,
                 conversation_context   = conversation_context,
                 accumulated_strategies = strategy_context,
@@ -193,46 +164,36 @@ class UnifiedRainbowStrategy:
                 seed_instruction       = seed_instruction,
                 seed_category          = seed_category,
                 seed_role              = seed_role,
-                seed_severity          = seed_severity,
                 target_role            = target_role,
-                target_severity        = target_severity,
                 patient_profile        = patient_profile,
                 conversation_context   = conversation_context,
                 accumulated_strategies = strategy_context,
             )
         elif mutation_type == "crossover":
             try:
-                p2_cat, p2_role, p2_sev, p2_inst = self.archive.select_seed()
+                p2_cat, p2_role, _p2_sev, p2_inst = self.archive.select_seed()
             except ValueError:
-                p2_cat, p2_role, p2_sev, p2_inst = (
-                    seed_category, seed_role, seed_severity, seed_instruction
-                )
+                p2_cat, p2_role, p2_inst = seed_category, seed_role, seed_instruction
             return await self.mutator.crossover_mutation(
                 instruction1           = seed_instruction,
                 category1              = seed_category,
                 role1                  = seed_role,
-                severity1              = seed_severity,
                 instruction2           = p2_inst,
                 category2              = p2_cat,
                 role2                  = p2_role,
-                severity2              = p2_sev,
                 target_category        = target_category,
                 target_role            = target_role,
-                target_severity        = target_severity,
                 patient_profile        = patient_profile,
                 conversation_context   = conversation_context,
                 accumulated_strategies = strategy_context,
             )
         else:  # random
-            # fix: seed_category/seed_role/target_category/target_role 모두 명시 전달
             return await self.mutator.random_mutation(
                 seed_instruction       = seed_instruction,
                 seed_category          = seed_category,
                 seed_role              = seed_role,
-                seed_severity          = seed_severity,
                 target_category        = target_category,
                 target_role            = target_role,
-                target_severity        = target_severity,
                 patient_profile        = patient_profile,
                 conversation_context   = conversation_context,
                 accumulated_strategies = strategy_context,
@@ -247,8 +208,6 @@ class UnifiedRainbowStrategy:
                 context += f"\nStrategy {i}:\n"
                 for bullet in strat["bullets"]:
                     context += f"- {bullet}\n"
-                if "severity_score" in strat:
-                    context += f"(Severity: {strat['severity_score']}/5)\n"
         return context
 
     # ── learning ──────────────────────────────────────────────────────────────
@@ -257,17 +216,16 @@ class UnifiedRainbowStrategy:
         self,
         category:           str,
         role:               str,
-        severity_score:     int,
         instruction:        str,
         counselor_response: str,
         patient_response:   str,
         reasoning:          str,
     ):
-        """severity >= 2 결과에서 학습."""
-        if severity_score < 2:
-            return
-
-        print(f"🧠 Learning from severity {severity_score} ({category} × {role})...")
+        """
+        judge의 자연어 reasoning만으로 학습.
+        severity 점수는 여기 전달 X — refiner는 오직 reasoning text만 봄.
+        """
+        print(f"🧠 Learning from judge reasoning ({category} × {role})...")
 
         bullets = await self.refiner.analyze_failure(
             category             = category,
@@ -275,32 +233,27 @@ class UnifiedRainbowStrategy:
             original_instruction = instruction,
             counselor_response   = counselor_response,
             failure_reason       = reasoning,
-            severity_score       = severity_score,
         )
 
-        key    = f"{category}-{role}-sev{severity_score}"
-        key_cr = f"{category}-{role}"
+        key = f"{category}-{role}"
 
         entry = {
             "bullets":              bullets,
-            "severity_score":       severity_score,
             "original_instruction": instruction,
             "reasoning":            reasoning,
         }
 
-        for k in [key, key_cr]:
-            if k not in self.refiner.accumulated_strategies:
-                self.refiner.accumulated_strategies[k] = []
-            self.refiner.accumulated_strategies[k].insert(0, entry)
-            self.refiner.accumulated_strategies[k] = \
-                self.refiner.accumulated_strategies[k][:10]
+        if key not in self.refiner.accumulated_strategies:
+            self.refiner.accumulated_strategies[key] = []
+        self.refiner.accumulated_strategies[key].insert(0, entry)
+        self.refiner.accumulated_strategies[key] = \
+            self.refiner.accumulated_strategies[key][:10]
 
         self.learning_buffer.append({
-            "category":       category,
-            "role":           role,
-            "severity_score": severity_score,
-            "reasoning":      reasoning,
-            "bullets":        bullets,
+            "category":  category,
+            "role":      role,
+            "reasoning": reasoning,
+            "bullets":   bullets,
         })
         if len(self.learning_buffer) > self.buffer_size:
             self.learning_buffer.pop(0)
@@ -325,16 +278,12 @@ class UnifiedRainbowStrategy:
         self,
         patient_profile: dict,
         conversation_context: list,
-    ) -> Tuple[str, str, int, str, dict]:
+    ) -> Tuple[str, str, str, dict]:
         self.stats["new_generations"] += 1
         cat, role, inst = await self.trigger_agent.generate_harm_trigger(
             patient_profile, conversation_context
         )
-        target_severity = self.trigger_agent.severity_threshold
-        return cat, role, target_severity, inst, {
-            "method":          "new_generation",
-            "target_severity": target_severity,
-        }
+        return cat, role, inst, {"method": "new_generation"}
 
     def get_statistics(self) -> dict:
         total = self.stats["total_instructions"]

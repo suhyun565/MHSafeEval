@@ -4,7 +4,7 @@
 
 # Models to evaluate (each model tests itself)
 MODELS=(
-    "anthropic/claude-haiku-4.5"
+    # "anthropic/claude-haiku-4.5"
     # "minimax/minimax-m2.5"
     # "xiaomi/mimo-v2-flash"
     # "openai/gpt-3.5-turbo"
@@ -18,13 +18,13 @@ DISORDERS=("depression" "delusion" "psychosis")
 
 # 🔧 Disorder별 실제 환자 수 (하드코딩)
 declare -A PATIENT_COUNTS
-PATIENT_COUNTS["depression"]=51
+PATIENT_COUNTS["depression"]=30
 PATIENT_COUNTS["delusion"]=4
 PATIENT_COUNTS["psychosis"]=3
 
 MAX_TURNS=10
 NUM_ITERATIONS=1
-MAX_RETRIES=3  # Max retries per turn (1=no retry, 5=retry up to 5 times)
+MAX_RETRIES_LIST=(1 3 5)  # 각 모델에서 순회할 retry 값
 
 echo "🌈 Unified Rainbow Teaming - Self-Testing Evaluation"
 echo "=================================================================="
@@ -40,7 +40,7 @@ for DISORDER in "${DISORDERS[@]}"; do
 done
 echo "  - Max Turns per Patient: $MAX_TURNS"
 echo "  - Number of Iterations: $NUM_ITERATIONS"
-echo "  - Max Retries per Turn: $MAX_RETRIES"
+echo "  - Max Retries sweep: ${MAX_RETRIES_LIST[*]}"
 echo "  - Evaluation: 5-point severity scale"
 echo "  - Strategy: Always Rainbow + Adaptive Learning"
 echo ""
@@ -51,87 +51,108 @@ MODEL_COUNTER=0
 
 for MODEL in "${MODELS[@]}"; do
     MODEL_COUNTER=$((MODEL_COUNTER + 1))
-    
+
     echo ""
     echo "╔════════════════════════════════════════════════════════════════╗"
     echo "║  MODEL $MODEL_COUNTER / $TOTAL_MODELS: $MODEL (self-testing)"
     echo "╚════════════════════════════════════════════════════════════════╝"
     echo ""
-    
+
     MODEL_START_TIME=$(date +%s)
-    
-    for ITERATION in $(seq 1 $NUM_ITERATIONS); do
+
+    # ── MAX_RETRIES sweep: 1 → 5 ─────────────────────────────────────────
+    for MAX_RETRIES in "${MAX_RETRIES_LIST[@]}"; do
+
         echo ""
-        echo "┌────────────────────────────────────────────────┐"
-        echo "│  ITERATION $ITERATION / $NUM_ITERATIONS for $MODEL"
-        echo "└────────────────────────────────────────────────┘"
+        echo "╭────────────────────────────────────────────────────────────╮"
+        echo "│  MAX_RETRIES = $MAX_RETRIES  (model: $MODEL)"
+        echo "╰────────────────────────────────────────────────────────────╯"
         echo ""
-        
-        for DISORDER in "${DISORDERS[@]}"; do
-            # 🔧 Disorder별 환자 수 가져오기
-            NUM_PATIENTS=${PATIENT_COUNTS[$DISORDER]}
-            
+
+        RETRY_START_TIME=$(date +%s)
+
+        for ITERATION in $(seq 1 $NUM_ITERATIONS); do
+            echo ""
+            echo "┌────────────────────────────────────────────────┐"
+            echo "│  ITERATION $ITERATION / $NUM_ITERATIONS | retries=$MAX_RETRIES | $MODEL"
+            echo "└────────────────────────────────────────────────┘"
+            echo ""
+
+            for DISORDER in "${DISORDERS[@]}"; do
+                NUM_PATIENTS=${PATIENT_COUNTS[$DISORDER]}
+
+                echo ""
+                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+                echo "Model: $MODEL | Disorder: $DISORDER | Patients: $NUM_PATIENTS | Iter: $ITERATION | Retries: $MAX_RETRIES"
+                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+                echo ""
+
+                START_TIME=$(date +%s)
+
+                python main.py \
+                    --disorder_type "$DISORDER" \
+                    --model "$MODEL" \
+                    --max_turns "$MAX_TURNS" \
+                    --num_patients "$NUM_PATIENTS" \
+                    --mutation_strategy adaptive \
+                    --learning_rate 1.0 \
+                    --iteration "$ITERATION" \
+                    --max_retries_per_turn "$MAX_RETRIES"
+
+                END_TIME=$(date +%s)
+                ELAPSED=$((END_TIME - START_TIME))
+
+                echo ""
+                echo "✓ $DISORDER complete with $NUM_PATIENTS patients (took ${ELAPSED}s)"
+                echo ""
+            done
+
             echo ""
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            echo "Model: $MODEL | Disorder: $DISORDER | Patients: $NUM_PATIENTS | Iteration: $ITERATION"
+            echo "📊 Aggregating results for $MODEL | retries=$MAX_RETRIES | iter=$ITERATION..."
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            echo ""
-            
-            START_TIME=$(date +%s)
-            
-            python main.py \
-                --disorder_type "$DISORDER" \
-                --model "$MODEL" \
-                --max_turns "$MAX_TURNS" \
-                --num_patients "$NUM_PATIENTS" \
-                --mutation_strategy adaptive \
-                --learning_rate 1.0 \
-                --iteration "$ITERATION" \
-                --max_retries_per_turn "$MAX_RETRIES"
-            
-            END_TIME=$(date +%s)
-            ELAPSED=$((END_TIME - START_TIME))
-            
-            echo ""
-            echo "✓ $DISORDER complete with $NUM_PATIENTS patients (took ${ELAPSED}s)"
-            echo ""
-        done
-        
-        echo ""
-        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-        echo "📊 Aggregating results for $MODEL - Iteration $ITERATION..."
-        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-        
-        # Run aggregation
-        python -c "
+
+            python -c "
 import asyncio
 from main import aggregate_iteration_results
-aggregate_iteration_results($ITERATION, '$MODEL')
+aggregate_iteration_results($ITERATION, '$MODEL', max_retries=$MAX_RETRIES)
 "
-        
+
+            echo ""
+            echo "✓ Iteration $ITERATION / $NUM_ITERATIONS complete (retries=$MAX_RETRIES, $MODEL)"
+            echo ""
+        done
+
+        RETRY_END_TIME=$(date +%s)
+        RETRY_ELAPSED=$((RETRY_END_TIME - RETRY_START_TIME))
+        RETRY_ELAPSED_MIN=$((RETRY_ELAPSED / 60))
+
         echo ""
-        echo "✓ Iteration $ITERATION / $NUM_ITERATIONS complete for $MODEL!"
+        echo "╭────────────────────────────────────────────────────────────╮"
+        echo "│  ✓ MAX_RETRIES=$MAX_RETRIES complete for $MODEL"
+        echo "│    Elapsed: ${RETRY_ELAPSED_MIN} min (${RETRY_ELAPSED}s)"
+        echo "╰────────────────────────────────────────────────────────────╯"
         echo ""
     done
-    
+
     MODEL_END_TIME=$(date +%s)
     MODEL_ELAPSED=$((MODEL_END_TIME - MODEL_START_TIME))
     MODEL_ELAPSED_MIN=$((MODEL_ELAPSED / 60))
-    
+
     echo ""
     echo "╔════════════════════════════════════════════════════════════════╗"
     echo "║  ✓ MODEL $MODEL_COUNTER / $TOTAL_MODELS COMPLETE: $MODEL"
+    echo "║  All retry levels (${MAX_RETRIES_LIST[*]}) done"
     echo "║  Total time: ${MODEL_ELAPSED_MIN} minutes (${MODEL_ELAPSED}s)"
     echo "╚════════════════════════════════════════════════════════════════╝"
     echo ""
-    
-    # Brief pause between models
+
     sleep 2
 done
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "🎉 All $TOTAL_MODELS models × $NUM_ITERATIONS iterations complete!"
+echo "🎉 All $TOTAL_MODELS models × ${#MAX_RETRIES_LIST[@]} retry levels × $NUM_ITERATIONS iterations complete!"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo "Configuration Summary:"
@@ -140,7 +161,7 @@ echo "  - Disorder-specific patient counts:"
 for DISORDER in "${DISORDERS[@]}"; do
     echo "    • $DISORDER: ${PATIENT_COUNTS[$DISORDER]} patients"
 done
-echo "  - Max Retries: $MAX_RETRIES"
+echo "  - Max Retries swept: ${MAX_RETRIES_LIST[*]}"
 echo ""
 echo "Results saved to:"
 echo "  - eval_outputs_unified/{model}/successful_attacks_iter{N}.txt"

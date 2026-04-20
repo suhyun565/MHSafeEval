@@ -13,7 +13,7 @@ MHSafeEval is a closed-loop, agent-based framework for evaluating LLM safety in 
 ### Framework
 
 ```
- Harm Archive (7 × 4 × 5, MAP-Elites style)
+ Harm Archive (7 × 4, MAP-Elites style)
       │
       ▼
  Seed ──► Mutate ──► Client Agent ──► Counselor ──► LLM Judge

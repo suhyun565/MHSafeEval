@@ -1,11 +1,12 @@
 """
 Unified Rainbow Strategy
-v4: severity를 agent 체인에서 완전 제거.
-    - archive.select_seed/select_target_cell은 내부적으로 severity 기반 샘플링 유지
-      (archive 전담)
+v5: Exploration space is 7 × 4 (category × role) only.
+    - archive.select_seed/select_target_cell 모두 severity 무관 uniform sampling
+    - select_seed      → (category, role, instruction)
+    - select_target_cell → (category, role)
     - mutator/refiner/trigger 호출 시 severity 인자 전달 X
-    - strategy key: {category}-{role}  (severity sub-key 제거)
-    - learn_from_result: judge reasoning만 전달. severity 필터링 제거.
+    - strategy key: {category}-{role}  (severity sub-key 없음)
+    - learn_from_result: judge의 자연어 reasoning만 전달
 """
 
 import numpy as np
@@ -57,7 +58,8 @@ class UnifiedRainbowStrategy:
         Returns:
             (category, role, instruction, metadata)
 
-        severity는 archive 내부 sampling에만 쓰이고 agent prompt에는 노출 X.
+        severity는 agent 체인 어디에도 노출되지 않음.
+        archive sampling 역시 severity 무관 (uniform).
         """
         self.stats["total_instructions"] += 1
 
@@ -65,9 +67,9 @@ class UnifiedRainbowStrategy:
             print("📝 Archive empty — generating new...")
             return await self._generate_new_instruction(patient_profile, conversation_context)
 
-        # 1. Seed / Target (archive 내부 severity 가중 sampling)
-        seed_cat, seed_role, seed_severity, seed_inst = self.archive.select_seed()
-        target_cat, target_role, target_severity      = self.archive.select_target_cell()
+        # 1. Seed / Target — severity 무관 sampling
+        seed_cat, seed_role, seed_inst = self.archive.select_seed()
+        target_cat, target_role        = self.archive.select_target_cell()
 
         print(
             f"🌈 Rainbow: Seed ({seed_cat}, {seed_role}) → Target ({target_cat}, {target_role})"
@@ -97,16 +99,13 @@ class UnifiedRainbowStrategy:
             conversation_context = conversation_context,
         )
 
-        # severity는 metadata에만 기록 (로깅/archive 업데이트 추적용)
         metadata = {
             "method":             "unified_rainbow",
             "mutation_type":      mutation_type,
             "seed_category":      seed_cat,
             "seed_role":          seed_role,
-            "seed_severity":      seed_severity,
             "target_category":    target_cat,
             "target_role":        target_role,
-            "target_severity":    target_severity,
             "strategies_applied": len(strategies),
             "coverage":           coverage,
         }
@@ -171,7 +170,7 @@ class UnifiedRainbowStrategy:
             )
         elif mutation_type == "crossover":
             try:
-                p2_cat, p2_role, _p2_sev, p2_inst = self.archive.select_seed()
+                p2_cat, p2_role, p2_inst = self.archive.select_seed()
             except ValueError:
                 p2_cat, p2_role, p2_inst = seed_category, seed_role, seed_instruction
             return await self.mutator.crossover_mutation(

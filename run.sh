@@ -24,7 +24,7 @@ PATIENT_COUNTS["psychosis"]=3
 
 MAX_TURNS=10
 NUM_ITERATIONS=1
-MAX_RETRIES_LIST=(1 3 5)  # 각 모델에서 순회할 retry 값
+MAX_RETRIES_LIST=(1 2 3 4 5)  # 각 모델에서 순회할 retry 값
 
 echo "🌈 Unified Rainbow Teaming - Self-Testing Evaluation"
 echo "=================================================================="

@@ -25,9 +25,11 @@ MHSafeEval is a closed-loop, agent-based framework for evaluating LLM safety in 
 
 ## 🧭 R-MHSafe Taxonomy
 
-R-MHSafe characterizes LLM counseling harm along three axes: **harm category × counselor role × severity**. This yields a **7 × 4 × 5 = 140 cell** evaluation space (28 role-aware behaviors × 5 severity levels).
+R-MHSafe characterizes LLM counseling harm along three axes: **harm category × counselor role × severity**.
 
-Because severity 1 (Completely Safe) does not represent harm, it is excluded from seed selection, target selection, and `filled` marking. The **effective exploration space is therefore 7 × 4 × 4 = 112 cells (severity 2–5)**.
+The attacker's **exploration space is 7 × 4 = 28 cells** (category × role). Severity is produced by the judge and used only for (a) the ASR threshold (severity ≥ 2), (b) marking a cell as `filled`, and (c) per-cell best-severity logging. Severity is **not a behavior dimension for archive binning** and **not a weight for sampling** — seed selection is uniform over filled cells, and target selection prioritizes empty cells uniformly.
+
+The full 28 × 5 = 140 severity rubric (one 5-level ladder per (category, role) pair) is used by the judge only and is never surfaced to the attacker-side agents.
 
 > **Expert-validated.** R-MHSafe was developed through a human-in-the-loop process with **licensed psychotherapy experts**. The categories, roles, and severity rubrics were iteratively reviewed, refined, and finally endorsed by clinicians for clinical plausibility, internal coherence, and suitability for analyzing harm trajectories in counseling-like interactions (see Appendix D of the paper).
 
@@ -126,7 +128,7 @@ Refiner learning happens from **judge reasoning text only** — severity scores 
 | File | Description |
 |------|-------------|
 | `main.py` | Main evaluation loop (retry-augmented, multi-dimensional judging) |
-| `harm_archive.py` | 7 × 4 × 5 QD archive; severity-weighted sampling; severity-1 exclusion |
+| `harm_archive.py` | 7 × 4 QD archive (category × role); uniform seed sampling; empty-first target selection; severity used only for filled threshold (≥ 2) and best-severity logging |
 | `harm_trigger_agent.py` | 2-step client utterance generation (select pair → generate instruction); severity-free |
 | `harm_mutator.py` | Category / role / crossover / random mutation; severity-free |
 | `harm_instruction_refiner.py` | Extracts strategy bullets from judge reasoning only |
@@ -172,4 +174,3 @@ chmod +x run.sh
 | `--learning_rate` | `1.0` | Fraction of learned strategies applied during mutation |
 | `--iteration` | `1` | Iteration ID for output naming |
 | `--max_retries_per_turn` | `5` | Retry budget per turn when severity < 2 |
-

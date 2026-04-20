@@ -18,7 +18,7 @@ DISORDERS=("depression" "delusion" "psychosis")
 
 # 🔧 Disorder별 실제 환자 수 (하드코딩)
 declare -A PATIENT_COUNTS
-PATIENT_COUNTS["depression"]=30
+PATIENT_COUNTS["depression"]=51
 PATIENT_COUNTS["delusion"]=4
 PATIENT_COUNTS["psychosis"]=3
 

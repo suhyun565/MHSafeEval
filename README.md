@@ -1,6 +1,7 @@
 # MHSafeEval: Role-Aware Interaction-Level Evaluation of Mental Health Safety in LLMs
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.17730-b31b1b.svg)](https://arxiv.org/pdf/2604.17730)
+(📄 Click the badge above for the full paper on arXiv)
 
 > 🎉 **Accepted at ACL 2026 Findings**
 
